@@ -5,7 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;500;700&display=swap" rel="stylesheet">
   
@@ -121,31 +122,81 @@
           <h2>Video journey</h2>
           <p>Enter and visit one of the most famous museums in the world and enjoy<br> masterpieces such as Mona Lisa or Hammurabi's Code</p>
         </div>
-        <img src="assets/img/video.jpg" alt="video">
-        <div class="video_control_panel dark_section">
-          <input type="range">
-          <input type="range">
-        </div>
+        <div class="video_container">
+          <video src="assets/video/video0.mp4" poster="assets/img/video.jpg" controls>
+          </video> 
+          <div class="video_control_panel">
+            <button class="play_pause"></button>
+            <input type="range" id="seek_bar" min="0" max="100" value="53">
+            <button class="volume"></button>
+            <input type="range" id="volume_bar"  min="0" max="1" step="0.1" value="0.27">
+            <button class="full_screen"></button>
+          </div>
+          <img src="assets/svg/play_big.svg">
+        </div>        
         <div class="video_slider">
+          <div class="video_slider_item">
+            <img src="assets/img/poster3.jpg" alt="video poster">
+          </div>
           <div class="video_slider_item">
             <img src="assets/img/poster1.jpg" alt="video poster">
           </div>
           <div class="video_slider_item">
             <img src="assets/img/poster2.jpg" alt="video poster">
-          </div>
-          <div class="video_slider_item">
-            <img src="assets/img/poster3.jpg" alt="video poster">
-          </div>
+          </div>          
         </div>
       </div>
     </section>
-    <section>
-      <div class="container"></div>
+    <section class="gallery dark_section">
+      <div class="container">
+        <h2>Art Gallery</h2>
+        <div class="gallery_list">
+          <img src="assets/img/galery1.jpg" alt="picture">
+          <img src="assets/img/galery2.jpg" alt="picture">
+          <img src="assets/img/galery3.jpg" alt="picture">
+          <img src="assets/img/galery4.jpg" alt="picture">
+          <img src="assets/img/galery5.jpg" alt="picture">
+          <img src="assets/img/galery6.jpg" alt="picture">
+          <img src="assets/img/galery7.jpg" alt="picture">
+          <img src="assets/img/galery8.jpg" alt="picture">
+          <img src="assets/img/galery9.jpg" alt="picture">
+          <img src="assets/img/galery10.jpg" alt="picture">
+          <img src="assets/img/galery12.jpg" alt="picture">
+          <img src="assets/img/galery15.jpg" alt="picture">
+        </div>
+      </div>
     </section>
-    <section>
-      <div class="container"></div>
+    <section class="tickets">
+      <div class="container">
+        <h2>Buy tickets</h2>
+        <div class="tickets_section">
+          <img src="assets/img/buy_tickets.jpg" alt="picture">
+          <div class="tickets_section_sale">
+            <div class="tickets_section_sale_type">
+              <p></p>
+              <label class="type_ticket">Permanent exhibition
+                <input type="radio" name="type_ticket" name="permanent_exhibition"><br>
+                <span class="checkmark"></span>
+              </label>
+              <label class="type_ticket">Temporary exhibition
+                <input type="radio" name="type_ticket" name="temporary_exhibition"><br>
+                <span class="checkmark"></span>
+              </label>
+              <label class="type_ticket">Combined Admission
+                <input type="radio" name="type_ticket" name="combined_admission"><br>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="tickets_section_sale_amount">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
   </main>
   <footer></footer>
+  <script src="control_panel_range.js"></script>
 </body>
 </html>
