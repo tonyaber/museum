@@ -173,7 +173,7 @@
           <img src="assets/img/buy_tickets.jpg" alt="picture">
           <div class="tickets_section_sale">
             <div class="tickets_section_sale_type">
-              <p></p>
+              <p>Ticket Type</p>
               <label class="type_ticket">Permanent exhibition
                 <input type="radio" name="type_ticket" name="permanent_exhibition"><br>
                 <span class="checkmark"></span>
@@ -188,15 +188,103 @@
               </label>
             </div>
             <div class="tickets_section_sale_amount">
-
+              <p>Amount</p>
+              <label class="amount_ticket">Basic 18+
+                <div class="amount_ticket_input">
+                  <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                  <input type="number" min="0" max="20" value="1" readonly class="amount_ticket_number">
+                  <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                </div>                
+              </label>
+              <label class="amount_ticket">Senior 65+
+                <div class="amount_ticket_input">
+                  <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                  <input type="number" min="0" max="20" value="1" readonly class="amount_ticket_number">
+                  <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                </div>
+              </label>
+              <p class="tickets_section_sale_price">Total €220</p>
+              <button class="tickets_section_sale_button">Buy Now</button>
             </div>
           </div>
-
+        </div>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="container">
+        <h2>Contacts</h2>
+        <div class="contacts_section">
+          <div class="contacts_address">
+            <p>Palais Royal<br>Musee du Louvre</p>
+            <address>address: 75001 Paris, France
+              <a href="tel:+330140205050">phone: +33(0) 1 40 20 50 50</a>
+              <a href="mailto:info@louvre.fr">mail: info@louvre.fr</a>
+            </address>
+          </div>
+          <div class="contacts_map">
+            <img src="assets/img/map.jpg" alt="map">
+          </div>
         </div>
       </div>
     </section>
   </main>
-  <footer></footer>
+  <footer class="footer dark_section">
+      <div class="footer_up container">
+        <div class="footer_section_navigation">
+          <div class="footer_logo">
+            <p>Louvre</p>
+          </div>
+          <nav class="footer_navigation">
+            <ul class="footer_navigation_list">
+              <li>
+                <a href="">Visiting</a>
+              </li>
+              <li>
+                <a href="">Explore</a>
+              </li>
+              <li>
+                <a href="">Video</a>
+              </li>
+              <li>
+                <a href="">Gallery</a>
+              </li>
+              <li>
+                <a href="">Tickets</a>
+              </li>
+              <li>
+                <a href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer_socials">
+          <ul class="footer_socials_list">
+            <li>
+              <a class="footer_youtube" href="https://www.youtube.com/"></a>
+            </li>
+            <li>
+              <a class="footer_instagram" href="https://www.instagram.com"></a>
+            </li>
+            <li>
+              <a class="footer_facebook" href="https://www.facebook.com/"></a>
+            </li>
+            <li>
+              <a class="footer_twitter" href="https://twitter.com/"></a>
+            </li>
+            <li>
+              <a class="footer_pinterest" href="https://www.pinterest.com/"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="footer_section_copyright container">
+        <p>© 2021</p>
+        <p>The Rolling Scopes School</p>
+        <p>Username</p>
+      </div>
+    
+  </footer>
   <script src="control_panel_range.js"></script>
 </body>
 </html>
