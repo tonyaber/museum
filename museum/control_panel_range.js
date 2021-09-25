@@ -25,7 +25,6 @@ window.onload = function () {
   var seekBar = document.querySelector("#seek_bar");
   var volumeBar = document.querySelector("#volume_bar");
 
-console.log(seekBar)
   // Event listener for the play/pause button
   playButton.addEventListener("click", function () {
     if (video.paused == true) {

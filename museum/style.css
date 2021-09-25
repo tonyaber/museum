@@ -1,4 +1,4 @@
-html {
+* {
   scroll-behavior: smooth;
 }
 
@@ -23,11 +23,23 @@ section:first-of-type {
   background-color: #030303;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9D8665;
+}
+
+a:active {
+  color: #7E6C51;
+}
+
 .header_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 59px;
+  padding: 60px 0;
 }
 
 .header_logo {
@@ -78,8 +90,7 @@ section:first-of-type {
   font-weight: 200;
   font-size: 22px;
   line-height: 26px;
-  color: #ffffff;
-  text-decoration: none;  
+  color: #ffffff; 
 }
 
 .welcome {
@@ -87,17 +98,96 @@ section:first-of-type {
 }
 
 .welcome_section {
-  background-image: url("assets/img/welcome.jpg");
+  position: relative;
+  background-image: url("assets/img/welcome_slider/1.jpg");
   background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background-position: 100% calc(100% - 60px); 
+}
+
+.welcome_image {
+  width: 1000px;
+  height: 750px;
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  z-index: 1
+}
+
+.welcome_image{
+  background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%);
+  z-index: 2;
+}
+
+.welcome_slider {
+  position: absolute;
+  bottom:0;
+  right: 0;
+  width: 600px;
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000000;
+  z-index: 4;
+}
+
+.welcome_slider p {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.welcome_slider_list{
+  display: flex;
+  justify-content:space-between;
+  gap: 25px;
+}
+
+.welcome_slider_list li {
+  list-style: none;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+}
+
+.welcome_slider_button button {
+  padding: 0;
+  width: 45px;
+  height: 15px;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+.welcome_slider_button .left {
+  background: url("assets/svg/arrow_left.svg") no-repeat center center;
+}
+
+.welcome_slider_button .right {
+  background: url("assets/svg/arrow_right.svg") no-repeat center center;
+}
+
+.welcome_slider_list li:nth-child(1){
+  background-color: #D2B183
+}
+
+.welcome_slider_list li:hover {
+  background-color: #9D8665 !important;
 }
 
 .welcome_title {
+  position: relative;
   display: block;
   padding-top: 150px;
   padding-bottom:272px;
   color: #ffffff;
   font-style: normal;
+  z-index: 4;
 }
 
 .welcome_title h2 {
@@ -110,6 +200,7 @@ section:first-of-type {
   line-height: 90px;
   text-transform: uppercase;
   letter-spacing: 5px;
+  z-index: 5;
 }
 
 .welcome_title p {
@@ -121,6 +212,7 @@ section:first-of-type {
   font-style: normal;
   font-size: 28px;
   letter-spacing: 2px;
+  z-index: 5;
 }
 
 .welcome_title a {
@@ -138,6 +230,13 @@ section:first-of-type {
   font-style: normal;
   letter-spacing: 2px;
   border-radius: 10px;
+  z-index: 5;
+  color: #FFFFFF;
+}
+
+.welcome_title a:hover{
+  background-color: #9D8665;
+  color: #ffffff;
 }
 
 .visiting_title {
@@ -168,6 +267,10 @@ section:first-of-type {
   flex-wrap: wrap;
   gap: 75px 60px;
   margin-top: 103px;
+}
+
+.visiting_section a {
+  color: #000000;
 }
 
 .visiting_section_item {
@@ -370,7 +473,7 @@ video::-webkit-media-controls {
   gap: 42px;
 }
 
-.gallery h2 {
+#gallery h2 {
   font-style: normal;
   font-weight: normal;
   font-size: 80px;
@@ -389,7 +492,7 @@ video::-webkit-media-controls {
   gap:24px 36px;
 }
 
-.tickets h2 {
+#tickets h2 {
   position: relative;
   font-style: normal;
   font-weight: normal;
@@ -400,7 +503,7 @@ video::-webkit-media-controls {
   color: #9D8665;
 }
 
-.tickets h2::after{
+#tickets h2::after{
    content: "";
   position: absolute;
   bottom: -25px;
@@ -561,9 +664,16 @@ video::-webkit-media-controls {
   letter-spacing: 2px;
   color: #FFFFFF;
   background-color: #000000;
+  border: 0;
+  border-radius: 2px;
 }
 
-.contacts h2 {
+.tickets_section_sale_button:hover {
+  color: #000000;
+  background-color: #9D8665;
+}
+
+#contacts h2 {
   position: relative;
   font-style: normal;
   font-weight: normal;
@@ -574,7 +684,7 @@ video::-webkit-media-controls {
   color: #9D8665;
 }
 
-.contacts h2::after{
+#contacts h2::after{
   content: "";
   position: absolute;
   bottom: -25px;
@@ -603,7 +713,6 @@ video::-webkit-media-controls {
   font-weight: 300;
   font-size: 22px;
   line-height: 26px;
-  text-decoration: none;
   text-transform: none;
   color:#000000;
   font-style: normal;
@@ -650,7 +759,6 @@ video::-webkit-media-controls {
 }
 
 .footer_navigation_list a {
-  text-decoration: none;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 200;
