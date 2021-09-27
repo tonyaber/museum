@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;700&display=swap" rel="stylesheet">
   
   <title>museum</title>
 </head>
@@ -58,7 +58,7 @@
           
         </div>
         <div class="welcome_slider">
-          <p><span id="welcome_slider_number">01</span> | 05</p>
+          <p><span id="welcome_slider_number">01</span>|<span>05</span></p>
           <ul class="welcome_slider_list">
             <li></li>
             <li></li>
@@ -120,7 +120,7 @@
       <div class="container explore_section">
         <div class="explore_section_text">
           <h2>Picture explore</h2>
-          <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
+          <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading<br> artist of the Spanish Golden Age.</p>
           <p>It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th
           century.</p>
           <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked
@@ -142,19 +142,32 @@
           </video> 
           <div class="video_control_panel">
             <button class="play_pause"></button>
-            <input type="range" id="seek_bar" min="0" max="100" value="53">
+            <input type="range" id="seek_bar" min="0" max="100" value="54">
             <button class="volume"></button>
-            <input type="range" id="volume_bar"  min="0" max="1" step="0.1" value="0.27">
+            <input type="range" id="volume_bar"  min="0" max="1" step="0.1" value="0.40">
             <button class="full_screen"></button>
           </div>
           <img src="assets/svg/play_big.svg">
         </div>        
         <div class="video_slider">
           <div class="video_slider_item">
-            <img src="assets/img/poster3.jpg" alt="video poster">
+            <iframe 
+              width="452" height="254" 
+              loading="lazy"
+              src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
           </div>
           <div class="video_slider_item">
-            <img src="assets/img/poster1.jpg" alt="video poster">
+            <iframe 
+              width="452" height="254" 
+              loading="lazy"
+              src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
           </div>
           <div class="video_slider_item">
             <img src="assets/img/poster2.jpg" alt="video poster">
