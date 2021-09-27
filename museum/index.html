@@ -154,7 +154,7 @@
             <iframe 
               width="452" height="254" 
               loading="lazy"
-              src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player"
+              src="https://www.youtube.com/embed/aWmJ5DgyWPI?autoplay=0" title="YouTube video player"
               frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
@@ -164,33 +164,55 @@
             <iframe 
               width="452" height="254" 
               loading="lazy"
-              src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player"
+              src="https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=0" title="YouTube video player"
               frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
             </iframe>
           </div>
           <div class="video_slider_item">
-            <img src="assets/img/poster2.jpg" alt="video poster">
+            <iframe
+              width="452" height="254" 
+              loading="lazy"
+              src="https://www.youtube.com/embed/NOhDysLnTvY?autoplay=0" title="YouTube video player"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
           </div>          
+        </div>
+        <div class="video_slider_switch">
+          <img src="assets/svg/arrows_video_left.svg" alt="arrow left">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <img src="assets/svg/arrows_video_rigth.svg" alt="arrow rigth">
         </div>
       </div>
     </section>
     <section id="gallery" class="dark_section">
       <div class="container">
-        <h2>Art Gallery</h2>
-        <div class="gallery_list">
-          <img src="assets/img/galery1.jpg" alt="picture">
-          <img src="assets/img/galery2.jpg" alt="picture">
-          <img src="assets/img/galery3.jpg" alt="picture">
-          <img src="assets/img/galery4.jpg" alt="picture">
-          <img src="assets/img/galery5.jpg" alt="picture">
-          <img src="assets/img/galery6.jpg" alt="picture">
-          <img src="assets/img/galery7.jpg" alt="picture">
-          <img src="assets/img/galery8.jpg" alt="picture">
-          <img src="assets/img/galery9.jpg" alt="picture">
-          <img src="assets/img/galery10.jpg" alt="picture">
-          <img src="assets/img/galery12.jpg" alt="picture">
-          <img src="assets/img/galery15.jpg" alt="picture">
+        <div class="gallery_section">
+          <h2>Art Gallery</h2>
+          <div class="gallery_list">
+            <div class="gallery_list_inner">
+              <img src="assets/img/galery1.jpg" alt="picture">
+              <img src="assets/img/galery3.jpg" alt="picture">
+              <img src="assets/img/galery4.jpg" alt="picture">
+              <img src="assets/img/galery5.jpg" alt="picture">
+              <img src="assets/img/galery2.jpg" alt="picture">
+              <img src="assets/img/galery6.jpg" alt="picture">
+              <img src="assets/img/galery7.jpg" alt="picture">
+              <img src="assets/img/galery8.jpg" alt="picture">
+              <img src="assets/img/galery9.jpg" alt="picture">
+              <img src="assets/img/galery10.jpg" alt="picture">
+              <img src="assets/img/galery12.jpg" alt="picture">
+              <img src="assets/img/galery15.jpg" alt="picture">
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -217,20 +239,20 @@
             </div>
             <div class="tickets_section_sale_amount">
               <p>Amount</p>
-              <label class="amount_ticket">Basic 18+
+              <div class="amount_ticket">Basic 18+
                 <div class="amount_ticket_input">
                   <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
                   <input type="number" min="0" max="20" value="1" readonly class="amount_ticket_number">
                   <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                 </div>                
-              </label>
-              <label class="amount_ticket">Senior 65+
+              </div>
+              <div class="amount_ticket">Senior 65+
                 <div class="amount_ticket_input">
                   <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
                   <input type="number" min="0" max="20" value="1" readonly class="amount_ticket_number">
                   <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                 </div>
-              </label>
+              </div>
               <p class="tickets_section_sale_price">Total €220</p>
               <button class="tickets_section_sale_button">Buy Now</button>
             </div>
@@ -268,16 +290,16 @@
                 <a href="#visiting">Visiting</a>
               </li>
               <li>
-                <a href="#explore">Explore</a>
-              </li>
-              <li>
-                <a href="#video">Video</a>
-              </li>
-              <li>
                 <a href="#gallery">Gallery</a>
               </li>
               <li>
+                <a href="#explore">Explore</a>
+              </li>
+              <li>
                 <a href="#tickets">Tickets</a>
+              </li>
+              <li>
+                <a href="#video">Video</a>
               </li>
               <li>
                 <a href="#contacts">Contacts</a>
@@ -294,13 +316,13 @@
               <a class="footer_instagram" href="https://www.instagram.com"></a>
             </li>
             <li>
-              <a class="footer_facebook" href="https://www.facebook.com/"></a>
+              <a class="footer_pinterest" href="https://www.facebook.com/"></a>
             </li>
             <li>
               <a class="footer_twitter" href="https://twitter.com/"></a>
             </li>
             <li>
-              <a class="footer_pinterest" href="https://www.pinterest.com/"></a>
+              <a class="footer_facebook" href="https://www.pinterest.com/"></a>
             </li>
           </ul>
         </div>
@@ -309,7 +331,7 @@
       <div class="footer_section_copyright container">
         <p>© 2021</p>
         <p>The Rolling Scopes School</p>
-        <p>Username</p>
+        <p>Berchuk Antonina</p>
       </div>
     
   </footer>
