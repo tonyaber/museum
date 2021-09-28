@@ -480,6 +480,7 @@ video::-webkit-media-controls {
   -webkit-appearance: none;
   height: 8px;
   width: 929px;
+  cursor: pointer;
   background: linear-gradient(to right, #710707 0%, #710707 54%, #C4C4C4 54%, #C4C4C4 100%);
 }
 
@@ -487,6 +488,7 @@ video::-webkit-media-controls {
   -webkit-appearance: none;
   height: 8px;
   width: 155px;
+  cursor: pointer;
   background: linear-gradient(to right, #710707 0%, #710707 40%, #C4C4C4 40%, #C4C4C4 100%);
 }
 
@@ -996,7 +998,15 @@ footer hr{
   background-color: rgba(0,0,0,0.5);
   z-index:10;
 }
+
+.form_tickets_closed {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
 .form_tickets_container {  
+  position: relative;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -1027,12 +1037,15 @@ form {
   font-style: normal;
   font-weight: normal;
   font-size: 50px;
-  line-height: 55px;
+  line-height: 50px;
   text-transform: uppercase;
   color: #9D8665;
 }
 
 .form_tickets_date p {
+  margin:0;
+  padding:0;
+  margin-top: 15px;
   position: relative;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -1045,7 +1058,7 @@ form {
 .form_tickets_date > p::after{
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -11px;
   left: 0;
   right: 0;
   height: 3px;
@@ -1166,7 +1179,7 @@ form {
 }
 
 .form_tickets_card_label h5{
-  margin: 2px 0 5px;
+  margin: 2px 0 10px;
   padding: 0;
   font-size: 22px;
   line-height: 26px;
@@ -1189,7 +1202,7 @@ form {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 5px;
-  margin-top: 22px;
+  margin-top: 23px;
 }
 
 .form_tickets_card_count p {
@@ -1271,4 +1284,96 @@ form {
   top: 0;
   left: 0;
   fill: #BCBCBC;
+}
+
+.card_visa {
+  position:absolute;
+  top: 34px;
+  left: 285px;
+  z-index: 15;
+}
+
+.card_mastercard {
+  position:absolute;
+  top: 65px;
+  left: 285px;
+  z-index: 15;
+}
+
+.form_tickets_card_inputs_cards {
+  position: relative;
+  padding: 15px 20px;  
+}
+
+.form_tickets_card_inputs_cards {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+}
+
+.form_tickets_card_inputs_cards input {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 5px 0 10px;
+}
+.card_number input {
+  width: 215px;
+  height: 35px;
+}
+
+.card_date input {
+  width: 100px;
+  height: 35px;
+  margin-right: 15px;
+}
+
+.card_name input {
+  width: 320px;
+  height: 35px;
+}
+.card_cvc {
+  position: absolute;
+  top: 115px;
+  right: 20px;
+}
+
+.card_cvc p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.card_cvc input {
+  width: 75px;
+  height: 35px;
+  margin: 5px 0 6px;
+}
+
+.card_cvc span {
+  font-size: 10px;
+  line-height: 12px;
+  text-align: left;
+}
+
+.form_card_btn_conteiner {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 45px;
+}
+
+.form_tickets_btn {
+  width: 220px;
+  height: 45px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #FFFFFF;
+  background-color: #710707;
+  opacity: 0.9;
+  border: 0;
 }

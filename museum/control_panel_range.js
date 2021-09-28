@@ -84,7 +84,7 @@ window.onload = function () {
 
     // Update the slider value
     seekBar.value = value;
-    seekBar.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value+1}%, #C4C4C4 ${value+1}%, #C4C4C4 100%)`
+    seekBar.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value-1}%, #C4C4C4 ${value+1}%, #C4C4C4 100%)`
   });
 
   // Pause the video when the seek handle is being dragged

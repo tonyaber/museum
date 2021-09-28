@@ -323,6 +323,7 @@
   </footer>
   <div class="form_tickets hidden">
     <div class="form_tickets_container">
+      <img src="assets/svg/close.svg" class="form_tickets_closed" alt="close tickets form">
       <form>
         <div class="form_tickets_date">
           <img src="assets/svg/logo_сard_form.svg" width="85" height="41" alt="logo">
@@ -346,13 +347,13 @@
               <p>Basic 18+</p>
               <div class="form_tickets_count_input">
                 <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-                <input type="number" min="0" max="20" value="1" readonly class="form_tickets_count_number">
+                <input type="number" min="0" max="20" value="2" readonly class="form_tickets_count_number">
                 <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
               </div>
               <p>Senior 65+</p>
               <div class="form_tickets_count_input">
                 <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-                <input type="number" min="0" max="20" value="1" readonly class="form_tickets_count_number">
+                <input type="number" min="0" max="20" value="2" readonly class="form_tickets_count_number">
                 <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
               </div>
             </div>
@@ -394,8 +395,31 @@
             <svg class="front_card" width="360" height="211">
               <rect rx="5" ry="5" width="360" height="211" />
             </svg>
+            <img src="assets/svg/visa.svg"  class="card_visa" alt="card picture visa">
+            <img src="assets/svg/mastercard.svg" class="card_mastercard" alt="card picture mastercard">
+            <div class="form_tickets_card_inputs_cards">
+              <label class="card_number">Card number<br>
+                <input type="number" name="card_number">
+              </label><br>
+              <label class="card_date">Expiration date<br>
+                <input type="number" class="card_month" value="03" name="card_month">
+                <input type="number" class="card_year" value="2024" name="card_year">
+              </label><br>
+              <label class="card_name">Cardholder name<br>
+                <input type="text" name="card_name">
+              </label>
+              <label class="card_cvc"><p>CVC/CVV</p>
+                <input type="number" name="card_cvc"><br>
+                <span>The last<br>
+                3 or 4 digits<br>
+                on back<br>
+                of the card</span>
+              </label>
+            </div>
+          </div> 
+          <div class="form_card_btn_conteiner">
+            <button class="form_tickets_btn">Book</button>
           </div>
-          
         </div>
       </form>
     </div>

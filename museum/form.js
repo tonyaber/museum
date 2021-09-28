@@ -1,5 +1,6 @@
 const buttonBuy = document.querySelector('.tickets_section_sale_button'),
-  form = document.querySelector('.form_tickets');
+  form = document.querySelector('.form_tickets'),
+  closeBtn = document.querySelector('.form_tickets_closed');
 
 buttonBuy.addEventListener('click', () => {
   form.classList.remove('hidden');
@@ -11,4 +12,9 @@ form.addEventListener('click', (evt) => {
     form.classList.add('hidden');
     form.classList.remove('visible');
   }  
+})
+
+closeBtn.addEventListener('click', () => {
+  form.classList.add('hidden');
+  form.classList.remove('visible');
 })
