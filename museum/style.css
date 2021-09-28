@@ -1324,7 +1324,8 @@ form {
   height: 35px;
 }
 
-.card_date input {
+.form_tickets_card_inputs_cards .card_month,
+.form_tickets_card_inputs_cards .card_year {
   width: 100px;
   height: 35px;
   margin-right: 15px;
@@ -1340,10 +1341,9 @@ form {
   right: 20px;
 }
 
-.card_cvc p {
+.card_cvc {
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
 .card_cvc input {
@@ -1358,7 +1358,7 @@ form {
   text-align: left;
 }
 
-.form_card_btn_conteiner {
+.form_card_btn_container {
   display: flex;
   justify-content: flex-end;
   margin-top: 45px;
