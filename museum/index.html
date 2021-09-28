@@ -67,8 +67,12 @@
             <li></li>
           </ul>
           <div class="welcome_slider_button">
-            <button class="left"></button>
-            <button class="right"></button>
+            <button class="left">
+              <img src="assets/svg/arrow_left.svg" alt="arrow left">
+            </button>
+            <button class="right">
+              <img src="assets/svg/arrow_right.svg" alt="arrow right">
+            </button>
           </div>
         </div>
       </div>
@@ -297,19 +301,29 @@
         <div class="footer_socials">
           <ul class="footer_socials_list">
             <li>
-              <a class="footer_youtube" href="https://www.youtube.com/"></a>
+              <a class="footer_youtube" href="https://www.youtube.com/">
+                <img src="assets/svg/you_tube_small.svg" alt="youtube icons">
+              </a>
             </li>
             <li>
-              <a class="footer_instagram" href="https://www.instagram.com"></a>
+              <a class="footer_instagram" href="https://www.instagram.com">
+                <img src="assets/svg/instagram_small.svg" alt="instagram icons">
+              </a>
             </li>
             <li>
-              <a class="footer_pinterest" href="https://www.facebook.com/"></a>
+              <a class="footer_facebook" href="https://www.facebook.com/">
+                <img src="assets/svg/pinterest_small.svg" alt="facebook icons">
+              </a>
             </li>
             <li>
-              <a class="footer_twitter" href="https://twitter.com/"></a>
+              <a class="footer_twitter" href="https://twitter.com/">
+                <img src="assets/svg/twitter_small.svg" alt="twitter icons">
+              </a>
             </li>
             <li>
-              <a class="footer_facebook" href="https://www.pinterest.com/"></a>
+              <a class="footer_facebook" href="https://www.pinterest.com/">
+                <img src="assets/svg/facebook_small.svg" alt="pinterest icons">
+              </a>
             </li>
           </ul>
         </div>
@@ -330,13 +344,14 @@
           <h4>Booking tickets</h4>
           <p>Tour to Louvre</p>
           <div class="input_date">
-            <input type="date">
-            <input type="time">
+            <input type="text" name="ticket_date" placeholder="Date" onfocus="(this.type='date')" class="form_tickets_date_date" required>
+            <input type="text" name="ticket_time" placeholder="Time" onfocus="(this.type='time')" class="form_tickets_date_time" required>
           </div>
-          <input type="text">
-          <input type="email">
-          <input type="tel">
+          <input type="text" placeholder="Name" class="form_tickets_date_name" required>
+          <input type="email" placeholder="E-mail" class="form_tickets_date_email" required>
+          <input type="tel" placeholder="Phone" class="form_tickets_date_phone" required>
           <select name="select">
+            <option value="" disabled selected hidden>Ticket Type</option>
             <option value="value1">Permanent exhibition</option>
             <option value="value2">Temporary exhibition</option>
             <option value="value3">Combined Admission</option>
@@ -364,9 +379,9 @@
             <div class="form_tickets_card_label_info">
               <h4>Overview</h4>
               <h5>Tour to Louvre</h5>
-              <p>Friday, August 19</p>
-              <p>16 : 30</p>
-              <p>Temporary exhibition</p>
+              <p class="icons_date">Friday, August 19</p>
+              <p class="icons_time">16 : 30</p>
+              <p class="icons_check">Temporary exhibition</p>
             </div>
             <img src="assets/img/tickets.jpg" width="150" height="120" alt="museum">
           </div>
@@ -399,17 +414,17 @@
             <img src="assets/svg/mastercard.svg" class="card_mastercard" alt="card picture mastercard">
             <div class="form_tickets_card_inputs_cards">
               <label class="card_number">Card number<br>
-                <input type="number" name="card_number">
+                <input type="number" name="card_number" required>
               </label><br>
               Expiration date<br>
-                <input type="number" class="card_month" value="03" name="card_month">
-                <input type="number" class="card_year" value="2024" name="card_year">
+                <input type="number" class="card_month" value="03" name="card_month" required>
+                <input type="number" class="card_year" value="2024" name="card_year" required>
               <br>
               <label class="card_name">Cardholder name<br>
-                <input type="text" name="card_name">
+                <input type="text" name="card_name" required>
               </label>
               <label class="card_cvc">CVC/CVV<br>
-                <input type="number" name="card_cvc"><br>
+                <input type="number" name="card_cvc" required><br>
                 <span>The last<br>
                 3 or 4 digits<br>
                 on back<br>
@@ -424,9 +439,9 @@
       </form>
     </div>
   </div>
+  
   <script src="control_panel_range.js"></script>
   <script src="slider.js"></script>
-  <script src="scroll.js"></script>
   <script src="gallery.js"></script>
   <script src="form.js"></script>
 </body>

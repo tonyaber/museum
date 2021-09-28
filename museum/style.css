@@ -189,12 +189,8 @@ h3:hover {
   background-color: transparent;
 }
 
-.welcome_slider_button .left {
-  background: url("assets/svg/arrow_left.svg") no-repeat center center;
-}
-
-.welcome_slider_button .right {
-  background: url("assets/svg/arrow_right.svg") no-repeat center center;
+.welcome_slider_button button:hover {
+  filter: brightness(0) saturate(100%) invert(54%) sepia(24%) saturate(472%) hue-rotate(356deg) brightness(95%) contrast(89%);
 }
 
 .welcome_slider_list li:nth-child(1){
@@ -882,8 +878,8 @@ footer {
 .footer_section_navigation {
   display: flex;
   justify-content: space-between;
-  width: 50%;
-  padding-top: 90px;
+  width: 49%;
+  padding-top: 94px;
 }
 
 
@@ -926,7 +922,7 @@ footer {
 .footer_socials_list {
   margin: 0;
   padding: 0;
-  margin-top: 162px;
+  margin-top: 163px;
   display: flex;
   gap: 25px;
 }
@@ -938,38 +934,24 @@ footer {
 }
 
 .footer_socials_list a {
-  display: block;
-  width: 48px;
-  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 47px;
   border: 1px solid #ffffff;
   border-radius: 50%;
 }
 
-.footer_youtube {
-  background: url("assets/svg/you_tube_small.svg") no-repeat center center;
-}
-
-.footer_instagram {
-  background: url("assets/svg/instagram_small.svg") no-repeat center center;
-}
-
-.footer_twitter {
-  background: url("assets/svg/twitter_small.svg") no-repeat center center;
-}
-
-.footer_facebook {
-  background: url("assets/svg/facebook_small.svg") no-repeat center center;
-}
-
-.footer_pinterest {
-  background: url("assets/svg/pinterest_small.svg") no-repeat center center;
+.footer_socials_list a:hover{
+  filter: brightness(0) saturate(100%) invert(54%) sepia(24%) saturate(472%) hue-rotate(356deg) brightness(95%) contrast(89%);
 }
 
 .footer_section_copyright {
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 25px 0 52px;
+  padding: 30px 0 52px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 200;
@@ -1073,6 +1055,7 @@ form {
 
 .form_tickets_date input, 
 .form_tickets_date select {
+  text-indent: 43px;
   box-sizing: border-box;
   width: 100%;
   height: 45px;
@@ -1184,7 +1167,7 @@ form {
 }
 
 .form_tickets_card_label h5{
-  margin: 2px 0 10px;
+  margin: 3px 0 10px;
   padding: 0;
   font-size: 22px;
   line-height: 26px;
@@ -1381,4 +1364,63 @@ form {
   background-color: #710707;
   opacity: 0.9;
   border: 0;
+}
+.form_tickets_container .form_tickets_date input::-webkit-input-placeholder{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  color: #030303;
+}
+
+.form_tickets_date_date::-webkit-input-placeholder{
+  background: url("assets/svg/date.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 155px 4px;
+}
+
+.form_tickets_date_time::-webkit-input-placeholder{
+  background: url("assets/svg/time.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 155px 4px;
+}
+
+.form_tickets_date_name::-webkit-input-placeholder{
+  background: url("assets/svg/name.svg") no-repeat 10px 5px;
+}
+
+.form_tickets_date_email::-webkit-input-placeholder{
+  background: url("assets/svg/email.svg") no-repeat 10px 8px;
+}
+
+.form_tickets_date_phone::-webkit-input-placeholder{
+  background: url("assets/svg/tel.svg") no-repeat 12px 2px;
+}
+
+.form_tickets_date select {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  color: #030303;
+  background: url("assets/svg/ballot.svg") no-repeat 12px center, url("assets/svg/arrow.svg") no-repeat 375px center;
+}
+
+.form_tickets_card_label_info .icons_date {
+  background: url("assets/svg/date.svg") no-repeat;
+  padding-left: 30px
+}
+
+.form_tickets_card_label_info .icons_time {
+  background: url("assets/svg/time.svg") no-repeat;
+  padding-left: 30px
+
+}
+.form_tickets_card_label_info .icons_check {
+  background: url("assets/svg/check_circle_outline.svg") no-repeat 0 2px;
+  padding-left: 30px
 }
