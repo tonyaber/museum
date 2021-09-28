@@ -36,6 +36,10 @@ a:active {
   color: #7E6C51;
 }
 
+h2:hover {
+  color: #9D8665;
+}
+
 .header_container {
   display: flex;
   justify-content: space-between;
@@ -977,6 +981,7 @@ footer hr{
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.5);
+  z-index:10;
 }
 .form_tickets_container {  
   box-sizing: border-box;
@@ -987,7 +992,7 @@ footer hr{
   height: 845px;
   margin: 50px auto;
   background-color: #ffffff;
-
+  z-index: 15;
 }
 
 form {
@@ -1127,5 +1132,40 @@ form {
 
 .form_tickets_card {
   height: 100%;
+  padding: 25px 30px;
   border: 1px solid black;
+}
+
+.form_tickets_card_label {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.form_tickets_card_label h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+  line-height: 37px;
+  color: #272727;
+}
+
+.form_tickets_card_label h5{
+  margin: 2px 0 5px;
+  padding: 0;
+  font-size: 22px;
+  line-height: 26px;
+  color: #740C11;
+  opacity: 0.9;
+}
+
+.form_tickets_card_label p {
+  margin: 0;
+  padding: 0; 
+  margin-top: 5px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
 }
