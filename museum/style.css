@@ -99,6 +99,11 @@ h3:hover {
   letter-spacing: 2px;
 }
 
+.header_navigation_list li a:hover,
+.footer_navigation_list li a:hover {
+  color: #9D8665;
+}
+
 .welcome {
   background-color: #030303;
 }
