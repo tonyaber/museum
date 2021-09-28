@@ -30,6 +30,7 @@ a {
 
 a:hover {
   color: #9D8665;
+  transition-duration: 1s;
 }
 
 a:active {
@@ -39,6 +40,7 @@ a:active {
 h2:hover,
 h3:hover {
   color: #9D8665;
+  transition-duration: 1s;
 }
 
 .header_container {
@@ -102,6 +104,7 @@ h3:hover {
 .header_navigation_list li a:hover,
 .footer_navigation_list li a:hover {
   color: #9D8665;
+  transition-duration: 1s;
 }
 
 .welcome {
@@ -191,6 +194,7 @@ h3:hover {
 
 .welcome_slider_button button:hover {
   filter: brightness(0) saturate(100%) invert(54%) sepia(24%) saturate(472%) hue-rotate(356deg) brightness(95%) contrast(89%);
+  transition-duration: 1s;
 }
 
 .welcome_slider_list li:nth-child(1){
@@ -199,6 +203,7 @@ h3:hover {
 
 .welcome_slider_list li:hover {
   background-color: #9D8665 !important;
+  transition-duration: 1s;
 }
 
 .welcome_title {
@@ -257,6 +262,7 @@ h3:hover {
 .welcome_title a:hover{
   background-color: #9D8665;
   color: #ffffff;
+  transition-duration: 1s;
 }
 
 .visiting_title {
@@ -328,6 +334,7 @@ h3:hover {
   right: 0;
   height: 2px;
   background-color: #9D8665;
+  transition-duration: 1s;
 }
 
 .visiting_section_item_option {
@@ -560,6 +567,11 @@ video::-webkit-media-controls {
   letter-spacing: 5px;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+
+.gallery_section h2:hover{
+  color: #9D8665;
+  transition-duration: 1s;
 }
 
 .gallery_list {
@@ -799,6 +811,7 @@ video::-webkit-media-controls {
 .tickets_section_sale_button:hover {
   color: #000000;
   background-color: #9D8665;
+  transition-duration: 1s;
 }
 
 #contacts h2 {
@@ -879,7 +892,7 @@ footer {
   display: flex;
   justify-content: space-between;
   width: 49%;
-  padding-top: 94px;
+  padding-top: 92px;
 }
 
 
@@ -945,6 +958,7 @@ footer {
 
 .footer_socials_list a:hover{
   filter: brightness(0) saturate(100%) invert(54%) sepia(24%) saturate(472%) hue-rotate(356deg) brightness(95%) contrast(89%);
+  transition-duration: 0.5s;
 }
 
 .footer_section_copyright {
