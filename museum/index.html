@@ -320,11 +320,52 @@
         <p>The Rolling Scopes School</p>
         <p>Berchuk Antonina</p>
       </div>
-    
   </footer>
+  <div class="form_tickets">
+    <div class="form_tickets_container">
+      <form>
+        <div class="form_tickets_date">
+          <img src="assets/svg/logo_сard_form.svg" width="85" height="41" alt="logo">
+          <h4>Booking tickets</h4>
+          <p>Tour to Louvre</p>
+          <div class="input_date">
+            <input type="date">
+            <input type="time">
+          </div>
+          <input type="text">
+          <input type="email">
+          <input type="tel">
+          <select name="select">
+            <option value="value1">Permanent exhibition</option>
+            <option value="value2">Temporary exhibition</option>
+            <option value="value3">Combined Admission</option>
+          </select>
+          <div class="form_tickets_count">
+            <p>Entry ticket</p>
+            <div class="form_tickets_count_grid">
+              <p>Basic 18+</p>
+              <div class="form_tickets_count_input">
+                <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                <input type="number" min="0" max="20" value="1" readonly class="form_tickets_count_number">
+                <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+              </div>
+              <p>Senior 65+</p>
+              <div class="form_tickets_count_input">
+                <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                <input type="number" min="0" max="20" value="1" readonly class="form_tickets_count_number">
+                <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form_tickets_card"></div>
+      </form>
+    </div>
+  </div>
   <script src="control_panel_range.js"></script>
   <script src="slider.js"></script>
   <script src="scroll.js"></script>
   <script src="gallery.js"></script>
+  <script src="form.js"></script>
 </body>
 </html>
