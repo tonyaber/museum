@@ -1,10 +1,11 @@
 const buttonBuy = document.querySelector('.tickets_section_sale_button'),
   form = document.querySelector('.form_tickets'),
-  closeBtn = document.querySelector('.form_tickets_closed');
+  closeBtn = document.querySelector('.form_tickets_closed'),
+  containerForm = document.querySelector('.form_tickets_container');
 
 buttonBuy.addEventListener('click', () => {
   form.classList.remove('hidden');
-  form.classList.add('visible')
+  form.classList.add('visible');
 })
 
 form.addEventListener('click', (evt) => {
