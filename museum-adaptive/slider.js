@@ -1,4 +1,4 @@
-const slider = document.querySelector('.welcome_section'),
+/*const slider = document.querySelector('.welcome_section'),
   buttonRight = slider.querySelector('.welcome_slider_button .right'),
   buttonLeft = slider.querySelector('.welcome_slider_button .left'),
   list = slider.querySelectorAll('.welcome_slider_list li'),
@@ -86,3 +86,4 @@ slider.addEventListener('mouseup', (evt) => {
   }
 })
 
+*/
