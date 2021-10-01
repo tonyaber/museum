@@ -3,6 +3,12 @@ window.onload = function () {
   //control panel 
   const range = document.querySelectorAll('input[type="range"]');
 
+  //media
+
+  if (window.matchMedia('(max-width: 1024px)').matches) {
+    range[0].setAttribute('value', '40');
+  }
+
   range.forEach(item => {
     item.addEventListener('input', function () {
       let value = this.value;

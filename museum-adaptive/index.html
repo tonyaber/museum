@@ -160,6 +160,26 @@
             <iframe 
               width="452" height="254" 
               loading="lazy"
+              srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
+                html,body{height:100%,position:relative}
+                a{text-decoration:none}
+                .iframe_video,.iframe_play{position:absolute;width:100%;top:0;bottom:0;margin:auto}                
+                .iframe_container{position:relative; display:flex; justify-content:space-around;gap:10px;margin:15px 36px 0 10px; }
+                p{position:relative;max-width:329; white-space: nowrap;overflow:hidden;text-overflow:ellipsis;color:#ffffff;font-family: 'Roboto',sans-serif;
+                  font-style: normal; font-weight: normal;font-size: 18px;line-height: 38px;}
+                .iframe_mona_lisa{min-width:40px;min-height:40px}
+                .iframe_dots{miw-width:4px;min-height:16px;overflow:visible}
+                @media (max-width: 1024px){.iframe_container{margin-top:10px;gap:5px}}
+                </style>
+                <a href=https://www.youtube.com/embed/aWmJ5DgyWPI?autoplay=0>
+                <img class='iframe_video'src=https://img.youtube.com/vi/aWmJ5DgyWPI/hqdefault.jpg alt='Demo video'>
+                <div class='iframe_container'>
+                  <img class='iframe_mona_lisa' src='assets/svg/you_tube_icons_mona_lisa.svg' alt='icons mona lisa'>
+                  <p>Exposition - Le Corps et l’Ame. De Donatello a Michel-Ange</p>
+                  <img class='iframe_dots' src='assets/svg/dots.svg' alt='icons dots'>
+                </div>
+                <img class='iframe_play' src='assets/svg/youtube_icons_play.svg' width='68' height='48' alt='icons play youtube'>
+                </a>"
               src="https://www.youtube.com/embed/aWmJ5DgyWPI?autoplay=0" title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
@@ -169,6 +189,26 @@
             <iframe 
               width="452" height="254" 
               loading="lazy"
+              srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
+                html,body{height:100%,position:relative}
+                a{text-decoration:none}
+                .iframe_video,.iframe_play{position:absolute;width:100%;top:0;bottom:0;margin:auto}                
+                .iframe_container{position:relative; display:flex; justify-content:space-around;gap:10px;margin:15px 36px 0 10px; }
+                p{position:relative;max-width:329; white-space: nowrap;overflow:hidden;text-overflow:ellipsis;color:#ffffff;font-family: 'Roboto',sans-serif;
+                  font-style: normal; font-weight: normal;font-size: 18px;line-height: 38px;}
+                .iframe_mona_lisa{min-width:40px;min-height:40px}
+                .iframe_dots{miw-width:4px;min-height:16px;overflow:visible}
+                @media (max-width: 1024px){.iframe_container{margin-top:10px;gap:5px}}
+                </style>
+                <a href=https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=0>
+                <img class='iframe_video'src=https://img.youtube.com/vi/Vi5D6FKhRmo/hqdefault.jpg alt='Demo video'>
+                <div class='iframe_container'>
+                  <img class='iframe_mona_lisa' src='assets/svg/you_tube_icons_mona_lisa.svg' alt='icons mona lisa'>
+                  <p>Au Louvre ! La Venus de Milo</p>
+                  <img class='iframe_dots' src='assets/svg/dots.svg' alt='icons dots'>
+                </div>
+                <img class='iframe_play' src='assets/svg/youtube_icons_play.svg' width='68' height='48' alt='icons play youtube'>
+                </a>"
               src="https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=0" title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
@@ -178,6 +218,26 @@
             <iframe
               width="452" height="254" 
               loading="lazy"
+              srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
+                html,body{height:100%,position:relative}
+                a{text-decoration:none}
+                .iframe_video,.iframe_play{position:absolute;width:100%;top:0;bottom:0;margin:auto}                
+                .iframe_container{position:relative; display:flex; justify-content:space-around;gap:10px;margin:15px 36px 0 10px; }
+                p{position:relative;max-width:329; white-space: nowrap;overflow:hidden;text-overflow:ellipsis;color:#ffffff;font-family: 'Roboto',sans-serif;
+                  font-style: normal; font-weight: normal;font-size: 18px;line-height: 38px;}
+                .iframe_mona_lisa{min-width:40px;min-height:40px}
+                .iframe_dots{miw-width:4px;min-height:16px;overflow:visible}
+                @media (max-width: 1024px){.iframe_container{margin-top:10px;gap:5px}}
+                </style>
+                <a href=https://www.youtube.com/embed/NOhDysLnTvY?autoplay=0>
+                <img class='iframe_video'src=https://img.youtube.com/vi/NOhDysLnTvY/hqdefault.jpg alt='Demo video'>
+                <div class='iframe_container'>
+                  <img class='iframe_mona_lisa' src='assets/svg/you_tube_icons_mona_lisa.svg' alt='icons mona lisa'>
+                  <p>Promenade dans les collections mesopotamiennes</p>
+                  <img class='iframe_dots' src='assets/svg/dots.svg' alt='icons dots'>
+                </div>
+                <img class='iframe_play' src='assets/svg/youtube_icons_play.svg' width='68' height='48' alt='icons play youtube'>
+                </a>"
               src="https://www.youtube.com/embed/NOhDysLnTvY?autoplay=0" title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
@@ -212,7 +272,11 @@
       <div class="container">
         <h2>Buy tickets</h2>
         <div class="tickets_section">
-          <img src="assets/img/buy_tickets.jpg" alt="picture">
+          <picture>
+            <source srcset="assets/img/buy_tickets_1024.jpg" media="(max-width: 1024px)">
+            <source srcset="assets/img/buy_tickets.jpg">
+            <img src="assets/img/buy_tickets.jpg" alt="picture"> 
+          </picture>          
           <div class="tickets_section_sale">
             <div class="tickets_section_sale_type">
               <p>Ticket Type</p>
@@ -245,7 +309,7 @@
                   <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                 </div>
               </div>
-              <p class="tickets_section_sale_price">Total € 220</p>
+              <p class="tickets_section_sale_price">Total €<span>220</span></p>
               <button class="tickets_section_sale_button">Buy Now</button>
             </div>
           </div>
@@ -265,7 +329,11 @@
             </address>
           </div>
           <div class="contacts_map">
-            <img src="assets/img/map.jpg" alt="map">
+            <picture>
+              <source srcset="assets/img/map_1024.jpg" media="(max-width: 1024px)">
+              <source srcset="assets/img/map.jpg">
+              <img src="assets/img/map.jpg" alt="map">
+            </picture>
           </div>
         </div>
       </div>

@@ -1701,12 +1701,84 @@ form {
     height: 700px;
   }
 
+  .video_container {
+    margin-top: 40px;
+  }
+
   .video_section_title p {
     display: none;
   }
 
+  .video_control_panel {
+    height: 60px;
+    bottom: -55px;
+    padding: 0 40px;
+  }
+
+  .video_control_panel .play_pause {
+    width: 23px;
+    height: 30px;
+    background-size: 23px 30px;
+  }
+
+  .video_control_panel #seek_bar {
+    width: 55.07vw;
+    height: 5px;
+    background: linear-gradient(to right, #710707 0%, #710707 40%, #C4C4C4 40%, #C4C4C4 100%);
+  }
+
+  .video_control_panel .volume {
+    width: 26px;
+    height: 20px;
+    background-size: 26px 20px;
+  }
+
+  .video_control_panel #volume_bar {
+    width: 13.96vw;
+    height: 5px;
+    background: linear-gradient(to right, #710707 0%, #710707 39%, #C4C4C4 39%, #C4C4C4 100%);
+  }
+
+  .video_control_panel .full_screen {
+    width: 26px;
+    height: 26px;
+    background-size: 26px;
+  }
+
+  .video_control_panel #seek_bar::-webkit-slider-thumb,
+  .video_control_panel #volume_bar::-webkit-slider-thumb  {
+    height: 13px;
+    width: 13px;
+  }
+
+  .video_container img {
+    height: 152px;
+    width: 152px;
+  }
+
+  .video_slider {
+    margin-top: 95px;
+  }
+
+  .video_slider_item iframe {
+    height: 16.6vw;
+  }
+
+  .video_slider_switch {
+    margin-top: 32px;
+  }
+
   .gallery_section h2{
     margin: 60px 0;
+  }
+
+  .gallery_list_inner {
+    height: 1450px
+  }
+
+  .gallery_list img {
+    width: 29.69vw;
+    height: auto;
   }
 
   #tickets h2 {
@@ -1720,7 +1792,7 @@ form {
 
   .tickets_section {
     margin-top: 83px;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
 
   .tickets_section img {
@@ -1738,15 +1810,22 @@ form {
   }
 
   .tickets_section_sale_amount {
-    margin-right: 29px;
+    margin-right: 30px;
   }
 
   .tickets_section_sale_amount .amount_ticket, 
-  .tickets_section_sale_amount .tickets_section_sale_price {
+  .tickets_section_sale_amount .amount_ticket:first-of-type {
     margin: 0;
-    margin-top: 28px;
+    margin-top: 29px;
   }
 
+  .tickets_section_sale_amount .tickets_section_sale_price {
+    margin-top: 25px;
+  }
+  .tickets_section_sale_price span{
+    padding-left: 13px;
+  }
+  
   .tickets_section_sale_amount p {
     text-align: left;
   }
@@ -1767,7 +1846,7 @@ form {
   }
 
   #contacts h2::after {
-    bottom: -20px;
+    bottom: -23px;
   }
 
   .contacts_section {
@@ -1798,8 +1877,12 @@ form {
     height: auto;
   }
 
+  .footer {
+    margin-top: 60px;
+  }
+
   .footer_section_navigation {
-    padding-top: 60px;
+    padding-top: 62px;
     width: 56%;
   }
 
@@ -1808,7 +1891,7 @@ form {
   }
 
   .footer_socials_list {
-    margin-top: 145px;
+    margin-top: 143px;
   }
 
   .footer_up {
@@ -1817,6 +1900,17 @@ form {
 
   .footer_section_copyright {
     padding: 50px 0;
+  }
+
+  .form_tickets_container {
+    width: 100vw;
+    height: 758px;
+    margin: 0;
+    margin-top:10px;
+  }
+
+  .form_tickets_container {
+    padding: 75px 27px 30px;
   }
 
 }
