@@ -22,24 +22,31 @@
           <h1>Louvre</h1>
         </div>
         <nav class="header_navigation">
+          <div class="header_burger">
+            <div class="header_burger_span">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
           <ul class="header_navigation_list">
             <li>
-              <a href="#visiting">Visiting</a>
+              <a href="#visiting">Visiting<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
             </li>
             <li>
-              <a href="#explore">Explore</a>
+              <a href="#explore">Explore<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
             </li>
             <li>
-              <a href="#video">Video</a>
+              <a href="#video">Video<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
             </li>
             <li>
-              <a href="#gallery">Gallery</a>
+              <a href="#gallery">Gallery<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
             </li>
             <li>
-              <a href="#tickets">Tickets</a>
+              <a href="#tickets">Tickets<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
             </li>
             <li>
-              <a href="#contacts">Contacts</a>
+              <a href="#contacts">Contacts<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
             </li>
           </ul>
         </nav>
@@ -273,7 +280,8 @@
         <h2>Buy tickets</h2>
         <div class="tickets_section">
           <picture>
-            <source srcset="assets/img/buy_tickets_1024.jpg" media="(max-width: 1024px)">
+            <source srcset="assets/img/buy_tickets_1024.jpg" media="(max-width: 1024px) and (min-width: 769px)">
+            <source srcset="assets/img/buy_tickets.jpg" media="(max-width: 768px)">
             <source srcset="assets/img/buy_tickets.jpg">
             <img src="assets/img/buy_tickets.jpg" alt="picture"> 
           </picture>          
@@ -330,7 +338,8 @@
           </div>
           <div class="contacts_map">
             <picture>
-              <source srcset="assets/img/map_1024.jpg" media="(max-width: 1024px)">
+              <source srcset="assets/img/map_1024.jpg" media="(max-width: 1024px) and (min-width: 769px)">
+              <source srcset="assets/img/map_768.jpg" media="(max-width: 768px)">
               <source srcset="assets/img/map.jpg">
               <img src="assets/img/map.jpg" alt="map">
             </picture>
@@ -429,13 +438,13 @@
           <div class="form_tickets_count">
             <p>Entry ticket</p>
             <div class="form_tickets_count_grid">
-              <p>Basic 18+</p>
+              <p>Basic 18+ (20 €)</p>
               <div class="form_tickets_count_input">
                 <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
                 <input type="number" min="0" max="20" value="2" readonly class="form_tickets_count_number">
                 <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
               </div>
-              <p>Senior 65+</p>
+              <p>Senior 65+ (10 €)</p>
               <div class="form_tickets_count_input">
                 <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
                 <input type="number" min="0" max="20" value="2" readonly class="form_tickets_count_number">
@@ -513,5 +522,6 @@
   <script src="slider.js"></script>
   <script src="gallery.js"></script>
   <script src="form.js"></script>
+  <script src="burger_menu.js"></script>
 </body>
 </html>

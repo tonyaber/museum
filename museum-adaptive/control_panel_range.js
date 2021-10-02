@@ -8,6 +8,9 @@ window.onload = function () {
   if (window.matchMedia('(max-width: 1024px)').matches) {
     range[0].setAttribute('value', '40');
   }
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    range[0].setAttribute('value', '31');
+  }
 
   range.forEach(item => {
     item.addEventListener('input', function () {
