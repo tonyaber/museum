@@ -1,17 +1,15 @@
 window.onload = function () {
-
+  console.log("Score: 150")
   //control panel 
   const range = document.querySelectorAll('input[type="range"]');
 
   //media
 
-  if (window.matchMedia('(max-width: 1024px)').matches) {
+  if (window.matchMedia('(max-width: 1024px) and (min-width: 769px) ').matches) {
     range[0].setAttribute('value', '40');
-  }
-  if (window.matchMedia('(max-width: 768px)').matches) {
+  } else if (window.matchMedia('(max-width: 768px) and (min-width: 421px)').matches) {
     range[0].setAttribute('value', '31');
-  }
-  if (window.matchMedia('(max-width: 420px)').matches) {
+  } else if (window.matchMedia('(max-width: 420px)').matches) {
     range[0].setAttribute('value', '40');
   }
 

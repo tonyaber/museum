@@ -172,7 +172,7 @@ h3:hover {
   bottom:0;
   right: 0;
   width: 600px;
-  height: 120px;
+  height: 125px;
   display: flex;
   justify-content: space-between;
   padding: 0 68px 0 75px;
@@ -1172,7 +1172,7 @@ form {
 }
 
 .form_tickets_count {
-  padding: 10px 15px 15px;
+  padding: 10px 15px 12px;
   border: 1px solid #000000;
 }
 
@@ -1205,7 +1205,7 @@ form {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  margin-top: 18px;
+  margin-top: 22px;
 }
 
 .form_tickets_count_grid p {
@@ -1656,8 +1656,6 @@ form {
 
   .header_logo {
     padding: 45px 0;
-    background-color: #000000;
-    z-index: 20;
   }
 
   .header_container {
@@ -1702,8 +1700,8 @@ form {
   .header_navigation_list {
     box-sizing: border-box;
     position: absolute;
-    top: -600px;
-    left: 0;
+    top: 130px;
+    left: -120%;
     width: 297px;
     height: 585px;
     z-index: 15;
@@ -1722,7 +1720,7 @@ form {
   }
 
   .header_navigation_list.active {
-    top: 130px;
+    left: 0;
     transition: all 0.5s;
   }
 
@@ -2078,8 +2076,108 @@ form {
     right: 25px;
   }
 }
+@media (max-width:1020px) and (min-width: 769px) {
+  .welcome_section .welcome_title h2 {
+    font-size: 45px;    
+    line-height: 55px;
+  }
 
-@media (max-width: 980px) {
+  .welcome_title p {
+    margin-top: 20px;
+  }
+
+  .gallery_list, .gallery_list::after {
+    height: 950px;
+  }
+  .tickets_section_sale {
+    margin-left: 30px;
+  }
+
+  .tickets_section_sale_amount {
+    margin-right: 0;
+  }
+
+  .footer_up {
+    flex-wrap: wrap;
+  }
+
+  .footer_navigation_list {
+    margin-left: 96px;
+  }
+
+  .footer_socials_list {
+    margin-left: 38.41vw;
+    margin-top: 47px;
+  }
+
+  .form_tickets {
+    overflow: scroll
+  }
+
+  .form_tickets_container {
+    width: 590px;
+    height: 1479px;
+    padding: 80px 30px 40px;
+    margin: 25px auto;
+  }
+
+  .form_tickets_container form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    width: 100vw;
+  }
+
+  .form_tickets_date, 
+  .form_tickets_card {
+    width: 100%;
+  }
+
+  .form_tickets_date_date::-webkit-input-placeholder{
+  background: url("assets/svg/date.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 305px 4px;
+  }
+
+  .form_tickets_date_time::-webkit-input-placeholder{
+    background: url("assets/svg/time.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 305px 4px;
+  }
+
+  .form_tickets_date select {
+    background: url("assets/svg/ballot.svg") no-repeat 12px center, url("assets/svg/arrow.svg") no-repeat 508px center;
+  }
+
+  .form_tickets_date .input_date {
+    margin-top: 52px;
+  }
+
+  .form_tickets_date p {
+    margin-top: 18px;
+  }
+
+  .form_tickets_count p {
+    margin-top: 0;
+  }
+
+  .form_tickets_count_grid p {
+    margin-top: 3px;
+  }
+  
+  .form_tickets_card {
+    margin-top: 50px;
+    padding: 25px 15px;
+  }
+
+  .form_tickets_card_svg {
+    margin-top: 15px;
+  }
+
+  .back_card,
+  .back_card_black_line {
+    left: 140px;
+  }
+
+}
+@media (max-width: 768px) {
   section {
     margin-top: 40px;
   }
@@ -2102,11 +2200,15 @@ form {
   }
 
   .header_navigation_list {
-    top: -900px;
-    left: -20px;
+    top: 130px;
+    left: -120%;
     width: 100vw;
     height: 861px;
     padding: 18px 55px 35px;
+  }
+
+  .header_navigation_list.active {
+    left: -20px;
   }
 
   .header_navigation_img {
@@ -2119,27 +2221,36 @@ form {
   }
 
   .header_navigation_img picture:nth-child(1){
-    width: calc(50vw - 65px);
-    height: auto;
     grid-area: img2;
   }
 
-  .header_navigation_img picture:nth-child(2){
+  .header_navigation_img picture:nth-child(1) img{
     width: calc(50vw - 65px);
     height: auto;
+  }
+
+  .header_navigation_img picture:nth-child(2){
     grid-area: img3;
   }
 
+  .header_navigation_img picture:nth-child(2) img{
+    width: calc(50vw - 65px);
+    height: auto;
+  }
+
   .header_navigation_img picture:nth-child(3){
+    grid-area: img1;
+  }
+
+  .header_navigation_img picture:nth-child(3) img {
     width: calc(100vw - 110px);
     height: auto;
-    grid-area: img1;
   }
 
   .header_navigation hr {
     display: block;
     height: 1px;
-    margin: 35px 0;
+    margin: 29px 0 32px;
     border: 0;
     background: #ffffff;
   }
@@ -2519,6 +2630,230 @@ form {
     left: 140px;
   }
 }
+@media (max-width:700px) and (min-width: 581px) {
+  .welcome_slider {
+    padding: 0 10vw;
+  } 
+  .welcome_section .welcome_title h2 {
+    margin-top: 5px;
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .tickets_section_sale {
+    margin-left: 30px;
+  }
+
+  .tickets_section_sale_amount {
+    margin-right: 0;
+  }
+  
+  .footer_socials_list{
+    margin-left: 32.41vw;
+  }
+}
+
+@media (max-width: 580px) and (min-width: 421px) {
+  .welcome_slider {
+    padding: 0 5vw;
+  } 
+
+  .welcome_image {
+    height: 64.86vw;
+  }
+
+  .welcome_section .welcome_title h2 {
+    margin-top: 5px;
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .welcome_title p {
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 0;
+  }
+
+  .gallery_list, 
+  .gallery_list::after {
+    height: 637px;
+  }
+
+  .tickets_section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer_section_copyright p:nth-child(2) {
+    display: none;
+  }
+
+  .footer_section_navigation {
+    flex-wrap: wrap;
+    padding-top: 45px;
+  }
+
+  .footer_navigation_list {
+    margin: 0;
+    margin-top: 40px;
+    width: calc(100vw - 40px);
+    grid-template-columns: auto auto auto;
+    row-gap: 30px;
+  }
+
+  .footer_socials_list {
+    margin: 50px 0 0;
+  }
+
+  .footer_socials {
+    margin: 0 auto;
+  }
+  
+  .form_tickets_container {
+    width: 100vw;
+    height: 1754px;
+    padding: 80px 30px 50px;
+  }
+
+  
+
+  .form_tickets_container form {
+    width: calc(100vw - 60px);
+  }
+
+  .form_tickets_date h4 {
+    font-size: 32px;
+    line-height: 35px;
+  }
+
+  .form_tickets_date p {
+    margin-top: 15px;
+  }
+
+  .form_tickets_date > p::after {
+    height: 2px;
+  }
+
+  .form_tickets_date .input_date {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .form_tickets_date input {
+    padding-top: 11px
+  }
+
+  .form_tickets_date_date::-webkit-input-placeholder{
+    background: url("assets/svg/date.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 77.38vw 4px;
+  }
+
+  .form_tickets_date_time::-webkit-input-placeholder{
+    background: url("assets/svg/time.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 77.38vw 4px;
+  }
+
+  .form_tickets_date select {
+    background: url(assets/svg/ballot.svg) no-repeat 12px center, url(assets/svg/arrow.svg) no-repeat 79.76vw center;
+  }
+
+  .form_tickets_count {
+    padding-bottom: 13px;
+  }
+
+  .form_tickets_count p {
+    margin: 0;
+  }
+
+  .form_tickets_count_grid {
+    gap: 18px;
+    margin-top: 22px;
+  }
+  
+
+  .form_tickets_card {
+    height: 885px;
+  }
+
+  .form_tickets_card_label img {
+    width: 28.57vw;
+    height: 22.85vw;
+  }
+
+  .form_tickets_card_inputs_cards input {
+    border: 0;
+  }
+
+  .form_tickets_card_inputs_cards {
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  .front_card {
+    width: calc(100vw - 90px);
+  }
+
+  .back_card {
+    left: 0;
+    top: 235px;
+    width: calc(100vw - 90px);
+  }
+
+  .back_card_black_line {
+    left: 0;
+    top: 260px;
+    width: calc(100vw - 90px);
+  }
+
+  .card_visa, 
+  .card_mastercard {
+    left: 60.48vw
+  }
+
+  .card_cvc {
+    left: 265px;
+    top: 320px;
+  }
+  
+
+  .form_card_btn_container {
+    margin-top: 264px
+  }
+  
+  .form_tickets_count_grid p {
+    width: 50%;
+    font-size: 15px;
+  }
+
+  .form_tickets_card_label {
+    position: relative;
+  }
+
+  .form_tickets_card_label img {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 22vw;
+    height: auto;
+  }
+
+  .card_visa, 
+  .card_mastercard {
+    left: 285px;
+  }
+
+  .form_tickets_date_date::-webkit-input-placeholder{
+    background: url("assets/svg/date.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 73.38vw 4px;
+  }
+
+  .form_tickets_date_time::-webkit-input-placeholder{
+    background: url("assets/svg/time.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 73.38vw 4px;
+  }
+
+  .form_tickets_date select {
+    background: url(assets/svg/ballot.svg) no-repeat 12px center, url(assets/svg/arrow.svg) no-repeat 74.76vw center;
+  }
+
+}
+
 @media (max-width: 420px) {
   section .container h2,
   #tickets h2,
@@ -2531,6 +2866,12 @@ form {
     height: 90px;
   }
   
+  .header_navigation_list {
+    margin-top:0;
+    padding-top: 20px;
+    top: 90px;
+  }
+
   .header_logo {
     padding: 35px 0;
   }
