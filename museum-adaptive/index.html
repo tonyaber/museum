@@ -29,26 +29,61 @@
               <span></span>
             </div>
           </div>
-          <ul class="header_navigation_list">
-            <li>
-              <a href="#visiting">Visiting<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
-            </li>
-            <li>
-              <a href="#explore">Explore<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
-            </li>
-            <li>
-              <a href="#video">Video<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
-            </li>
-            <li>
-              <a href="#gallery">Gallery<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
-            </li>
-            <li>
-              <a href="#tickets">Tickets<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
-            </li>
-            <li>
-              <a href="#contacts">Contacts<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
-            </li>
-          </ul>
+          <div class="header_navigation_list">
+            <ul class="header_navigation_list_link">
+              <li>
+                <a href="#visiting">Visiting<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
+              </li>
+              <li>
+                <a href="#explore">Explore<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
+              </li>
+              <li>
+                <a href="#video">Video<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
+              </li>
+              <li>
+                <a href="#gallery">Gallery<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
+              </li>
+              <li>
+                <a href="#tickets">Tickets<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
+              </li>
+              <li>
+                <a href="#contacts">Contacts<img src="assets/svg/greater_than_sign.svg" alt="greater than sign"></a>
+              </li>
+            </ul>
+            <div class="header_navigation_img">
+              <img src="assets/img/menu_image1.jpg" alt="museum photo">
+              <img src="assets/img/menu_image2.jpg" alt="museum photo">
+              <img src="assets/img/menu_image3.jpg" alt="museum photo">
+            </div>
+            <hr>
+            <ul class="header_socials_list">
+              <li>
+                <a class="footer_youtube" href="https://www.youtube.com/">
+                  <img src="assets/svg/you_tube_small.svg" alt="youtube icons">
+                </a>
+              </li>
+              <li>
+                <a class="footer_instagram" href="https://www.instagram.com">
+                  <img src="assets/svg/instagram_small.svg" alt="instagram icons">
+                </a>
+              </li>
+              <li>
+                <a class="footer_facebook" href="https://www.facebook.com/">
+                  <img src="assets/svg/pinterest_small.svg" alt="facebook icons">
+                </a>
+              </li>
+              <li>
+                <a class="footer_twitter" href="https://twitter.com/">
+                  <img src="assets/svg/twitter_small.svg" alt="twitter icons">
+                </a>
+              </li>
+              <li>
+                <a class="footer_facebook" href="https://www.pinterest.com/">
+                  <img src="assets/svg/facebook_small.svg" alt="pinterest icons">
+                </a>
+              </li>
+            </ul>
+          </div>          
         </nav>
       </div>      
     </div>
@@ -177,6 +212,7 @@
                 .iframe_mona_lisa{min-width:40px;min-height:40px}
                 .iframe_dots{miw-width:4px;min-height:16px;overflow:visible}
                 @media (max-width: 1024px){.iframe_container{margin-top:10px;gap:5px}}
+                @media (max-width: 420px){.iframe_dots{display:none}}
                 </style>
                 <a href=https://www.youtube.com/embed/aWmJ5DgyWPI?autoplay=0>
                 <img class='iframe_video'src=https://img.youtube.com/vi/aWmJ5DgyWPI/hqdefault.jpg alt='Demo video'>
@@ -206,6 +242,7 @@
                 .iframe_mona_lisa{min-width:40px;min-height:40px}
                 .iframe_dots{miw-width:4px;min-height:16px;overflow:visible}
                 @media (max-width: 1024px){.iframe_container{margin-top:10px;gap:5px}}
+                @media (max-width: 420px){.iframe_dots{display:none}}
                 </style>
                 <a href=https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=0>
                 <img class='iframe_video'src=https://img.youtube.com/vi/Vi5D6FKhRmo/hqdefault.jpg alt='Demo video'>
@@ -235,6 +272,7 @@
                 .iframe_mona_lisa{min-width:40px;min-height:40px}
                 .iframe_dots{miw-width:4px;min-height:16px;overflow:visible}
                 @media (max-width: 1024px){.iframe_container{margin-top:10px;gap:5px}}
+                @media (max-width: 420px){.iframe_dots{display:none}}
                 </style>
                 <a href=https://www.youtube.com/embed/NOhDysLnTvY?autoplay=0>
                 <img class='iframe_video'src=https://img.youtube.com/vi/NOhDysLnTvY/hqdefault.jpg alt='Demo video'>
@@ -281,7 +319,8 @@
         <div class="tickets_section">
           <picture>
             <source srcset="assets/img/buy_tickets_1024.jpg" media="(max-width: 1024px) and (min-width: 769px)">
-            <source srcset="assets/img/buy_tickets.jpg" media="(max-width: 768px)">
+            <source srcset="assets/img/buy_tickets.jpg" media="(max-width: 768px) and (min-width: 421px)">
+            <source srcset="assets/img/buy_tickets_420.jpg" media="(max-width: 420px)">
             <source srcset="assets/img/buy_tickets.jpg">
             <img src="assets/img/buy_tickets.jpg" alt="picture"> 
           </picture>          

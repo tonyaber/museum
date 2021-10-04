@@ -11,6 +11,9 @@ window.onload = function () {
   if (window.matchMedia('(max-width: 768px)').matches) {
     range[0].setAttribute('value', '31');
   }
+  if (window.matchMedia('(max-width: 420px)').matches) {
+    range[0].setAttribute('value', '40');
+  }
 
   range.forEach(item => {
     item.addEventListener('input', function () {

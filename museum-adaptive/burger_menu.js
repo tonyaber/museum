@@ -3,10 +3,16 @@ const burger = document.querySelector('.header_burger'),
   links = menuList.querySelectorAll('a'),
   welcomeTitle = document.querySelector('.welcome_title');
 
-
-
 burger.addEventListener('click', () => {
   burger.classList.toggle('active');
   menuList.classList.toggle('active');
-  welcomeTitle.classList.toggle('hidden');
+  welcomeTitle.classList.toggle('hide');
 })
+
+links.forEach(element => {
+    element.addEventListener('click', () => {
+        burger.classList.remove('active');
+        menuList.classList.remove('active');
+        welcomeTitle.classList.remove('hide');
+    })
+});
