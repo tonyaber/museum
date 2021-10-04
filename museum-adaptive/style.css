@@ -417,8 +417,39 @@ h3:hover {
 }
 
 .explore_section_img {
+  position: relative;
   align-self: end;
   margin-top: 15px;
+}
+
+.explore_section_img_filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.explore_section_slider {
+  position: absolute;
+  top: 0;
+  left: 61.11%;
+  height: 700px;
+  width: 4.2%;
+}
+
+.explore_section_slider .line {
+  display: block;
+  width: 5px;
+  height: 47%;
+  background-color: #ffffff
+}
+
+.explore_section_slider .circle {
+  display: block;
+  margin-left: -60%;
+  width: 100%;
+  height: 4.5%;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
 }
 
 .explore_section_text h2 { 
@@ -1574,6 +1605,15 @@ form {
     width: calc(50vw - 60px);
     height: auto;
   }
+
+  .explore_section .explore_section_img_filter {
+    width: 61.11%;
+    height: auto;
+  }
+
+  .explore_section_slider {
+    height: 99%;
+  }
   .video_container video {
     width: calc(100vw - 40px);
     height: auto;
@@ -1871,6 +1911,13 @@ form {
     height: 700px;
   }
 
+  .explore_section_img .explore_section_img_filter {
+    width: 440px;
+  }
+
+  .explore_section_slider {
+    height: 700px;
+  }
   .video_container {
     margin-top: 40px;
   }
@@ -2367,6 +2414,14 @@ form {
     height: auto;
   }
 
+  .explore_section_img .explore_section_img_filter {
+    width: 61.11%;
+  }
+
+  .explore_section_slider {
+    height: 99%;
+  }
+
   .video_container {
     margin-top: 20px;
   }
@@ -2640,6 +2695,10 @@ form {
     line-height: 40px;
   }
 
+  .explore_section_slider {
+    height: 99%;
+  }
+
   .tickets_section_sale {
     margin-left: 30px;
   }
@@ -2666,6 +2725,10 @@ form {
     margin-top: 5px;
     font-size: 28px;
     line-height: 40px;
+  }
+
+  .explore_section_slider {
+    height: 99%;
   }
 
   .welcome_title p {
@@ -3081,6 +3144,30 @@ form {
     margin-top: 40px;
   }
 
+  .explore_section_slider {
+    left: 60%;
+    height: 99%
+  }
+
+  .explore_section_slider .line {
+    width: 2px;
+  }
+
+  .explore_section_slider span:nth-child(1) {
+    height: 49%
+  }
+
+  .explore_section_slider span:nth-child(3){
+    height: 46%;
+  }
+
+  .explore_section_slider .circle {
+    border: 3px solid #ffffff;
+    margin-left: -50%;
+    width: 80%;
+    height: 3.5%;
+  }
+
   .gallery_list img {
     width: calc(50% - 12px);
   }
@@ -3366,6 +3453,10 @@ form {
   
   .welcome_title p {
     margin-top: 0;
+  }
+
+  .explore_section_slider {
+    height: 99%;
   }
 
   .form_tickets_count p {
