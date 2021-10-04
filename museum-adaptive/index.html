@@ -51,9 +51,21 @@
               </li>
             </ul>
             <div class="header_navigation_img">
-              <img src="assets/img/menu_image1.jpg" alt="museum photo">
-              <img src="assets/img/menu_image2.jpg" alt="museum photo">
-              <img src="assets/img/menu_image3.jpg" alt="museum photo">
+              <picture>
+                <source srcset="assets/img/menu_image1_420.jpg" media="(max-width: 420px)">
+                <source srcset="assets/img/menu_image1.jpg">
+                <img src="assets/img/menu_image1.jpg" alt="museum photo">
+              </picture>
+              <picture>
+                <source srcset="assets/img/menu_image2_420.jpg" media="(max-width: 420px)">
+                <source srcset="assets/img/menu_image2.jpg">
+                <img src="assets/img/menu_image2.jpg" alt="museum photo">
+              </picture>
+              <picture>
+                <source srcset="assets/img/menu_image3_420.jpg" media="(max-width: 420px)">
+                <source srcset="assets/img/menu_image3.jpg">
+                <img src="assets/img/menu_image3.jpg" alt="museum photo">
+              </picture>
             </div>
             <hr>
             <ul class="header_socials_list">
@@ -213,6 +225,7 @@
                 .iframe_dots{miw-width:4px;min-height:16px;overflow:visible}
                 @media (max-width: 1024px){.iframe_container{margin-top:10px;gap:5px}}
                 @media (max-width: 420px){.iframe_dots{display:none}}
+                @media (max-width: 400px){.iframe_play{height:12vw}}
                 </style>
                 <a href=https://www.youtube.com/embed/aWmJ5DgyWPI?autoplay=0>
                 <img class='iframe_video'src=https://img.youtube.com/vi/aWmJ5DgyWPI/hqdefault.jpg alt='Demo video'>
@@ -243,6 +256,7 @@
                 .iframe_dots{miw-width:4px;min-height:16px;overflow:visible}
                 @media (max-width: 1024px){.iframe_container{margin-top:10px;gap:5px}}
                 @media (max-width: 420px){.iframe_dots{display:none}}
+                @media (max-width: 400px){.iframe_play{height:12vw}}
                 </style>
                 <a href=https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=0>
                 <img class='iframe_video'src=https://img.youtube.com/vi/Vi5D6FKhRmo/hqdefault.jpg alt='Demo video'>
@@ -273,6 +287,7 @@
                 .iframe_dots{miw-width:4px;min-height:16px;overflow:visible}
                 @media (max-width: 1024px){.iframe_container{margin-top:10px;gap:5px}}
                 @media (max-width: 420px){.iframe_dots{display:none}}
+                @media (max-width: 400px){.iframe_play{height:12vw}}
                 </style>
                 <a href=https://www.youtube.com/embed/NOhDysLnTvY?autoplay=0>
                 <img class='iframe_video'src=https://img.youtube.com/vi/NOhDysLnTvY/hqdefault.jpg alt='Demo video'>
@@ -378,7 +393,8 @@
           <div class="contacts_map">
             <picture>
               <source srcset="assets/img/map_1024.jpg" media="(max-width: 1024px) and (min-width: 769px)">
-              <source srcset="assets/img/map_768.jpg" media="(max-width: 768px)">
+              <source srcset="assets/img/map_768.jpg" media="(max-width: 768px) and (min_width: 421px)">
+              <source srcset="assets/img/map_420.jpg" media="(max-width: 420px)">
               <source srcset="assets/img/map.jpg">
               <img src="assets/img/map.jpg" alt="map">
             </picture>
