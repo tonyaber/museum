@@ -1,5 +1,5 @@
 window.onload = function () {
-  console.log("Score: 150")
+  
   //control panel 
   const range = document.querySelectorAll('input[type="range"]');
 
