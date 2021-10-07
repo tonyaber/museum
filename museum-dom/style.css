@@ -153,13 +153,75 @@ h3:hover {
   bottom: 60px;
   right: 0;
   z-index: 2;
-  background-image: url("assets/img/welcome_slider/1.jpg");
-  background-repeat: no-repeat;
-  background-position: 100% 100%; 
-  background-size: 100% 100%;
+}
+
+.welcome_image_container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.item {
+  position: relative;
+  animation: 0.5s ease-in-out;
+}
+
+.item {
+  display: none;
+  
+}
+
+.item.active,
+.next{
+  display: block;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.to_left {
+  animation-name: left;
+}
+
+.to_right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from_left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.from_right {
+  animation-name: right;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
 }
 
 .welcome_image_gradient{
+  position: absolute;
+  top: 0;
+  left:0;
   width: 100%;
   height: 100%;
   background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 25%);
@@ -1569,7 +1631,6 @@ form {
   .welcome_image {
     width: 1000px;
     height: 750px;
-    background-size: 100% 100%;
   }
 }
 
@@ -1591,7 +1652,8 @@ form {
     padding-top: 10vw;
   }
 
-  .welcome_image {
+  .welcome_image,
+  .welcome_image_container img {
     height: calc(51.36vw);
     width: 68.49vw
   }
@@ -1741,7 +1803,7 @@ form {
     box-sizing: border-box;
     position: absolute;
     top: 130px;
-    left: -120%;
+    left: -150%;
     width: 297px;
     height: 585px;
     z-index: 15;
@@ -1823,7 +1885,8 @@ form {
     max-height: 585px;
   }
 
-  .welcome_image {
+  .welcome_image,
+  .welcome_image_container img {
     max-width: 700px;
     max-height: 525px;    
   }
@@ -2248,7 +2311,7 @@ form {
 
   .header_navigation_list {
     top: 130px;
-    left: -120%;
+    left: -150%;
     width: 100vw;
     height: 861px;
     padding: 18px 55px 35px;
@@ -2347,7 +2410,8 @@ form {
     display: none;
   }
 
-  .welcome_image {
+  .welcome_image,
+  .welcome_image_container img {
     left: 0;
     right: 0;
     bottom: 100px;
@@ -2717,7 +2781,8 @@ form {
     padding: 0 5vw;
   } 
 
-  .welcome_image {
+  .welcome_image,
+  .welcome_image_container img {
     height: 64.86vw;
   }
 
@@ -3003,7 +3068,8 @@ form {
     line-height: 19px;
   }
   
-  .welcome_image {
+  .welcome_image,
+  .welcome_image_container img {
     bottom: 80px;
     height: 67.86vw;
     max-height: 67.86vw;

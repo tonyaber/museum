@@ -1,89 +1,116 @@
-/*const slider = document.querySelector('.welcome_section'),
-  buttonRight = slider.querySelector('.welcome_slider_button .right'),
-  buttonLeft = slider.querySelector('.welcome_slider_button .left'),
-  list = slider.querySelectorAll('.welcome_slider_list li'),
-  number = slider.querySelector('#welcome_slider_number');
+const items = document.querySelectorAll('.welcome_image_container .item'),
+  itemsContainer = document.querySelector('.welcome_section'),
+  buttonRight = document.querySelector('.welcome_slider_button .right'),
+  buttonLeft = document.querySelector('.welcome_slider_button .left'),
+  list = document.querySelectorAll('.welcome_slider_list li'),
+  number = document.querySelector('#welcome_slider_number');
 
-const pictures = [
-  'assets/img/welcome_slider/1.jpg',
-  'assets/img/welcome_slider/2.jpg',
-  'assets/img/welcome_slider/3.jpg',
-  'assets/img/welcome_slider/4.jpg',
-  'assets/img/welcome_slider/5.jpg'
-]
+let currentItem = 0,
+  isEnabled = true;
 
-const changeImageToNext = (index) => {
-  slider.style.background = `url("${pictures[index]}") no-repeat 100% calc(100% - 60px)`;
-
+function changeCurrentItem (n) {
+  currentItem = (n + items.length) % items.length;
   list.forEach(item => item.style.background = '#ffffff');
-  list[index].style.background = '#D2B183';
-
-  number.textContent = `0` + (index + 1);
+  list[currentItem].style.background = '#D2B183';
+  number.textContent = `0` + (currentItem + 1);
 }
 
-const changeImageToPrev = (index) => {
-  slider.style.background = `url("${pictures[index - 1]}") no-repeat 100% calc(100% - 60px)`;
-
-  list.forEach(item => item.style.background = '#ffffff');
-  list[index - 1].style.background = '#D2B183';
-
-  number.textContent = `0` + index;
-}
-
-slider.style.background = `url("${pictures[0]}") no-repeat 100% calc(100% - 60px)`;
-
-list.forEach((item, index) => {
-  item.addEventListener('click', () => {
-    changeImageToNext(index);
+function hideItem (direction) {
+  isEnabled = false;
+  items[currentItem].classList.add(direction);
+  items[currentItem].addEventListener('animationend', function () {
+    this.classList.remove('active', direction);
   })
+}
+
+function showItem (direction) {
+  items[currentItem].classList.add('next', direction);
+  items[currentItem].addEventListener('animationend', function () {
+    this.classList.remove('next', direction);
+    this.classList.add('active');
+    isEnabled = true;
+  })
+}
+
+function previousItem (n) {
+  hideItem('to_right');
+  changeCurrentItem(n - 1);
+  showItem('from_left');
+}
+
+function nextItem (n) {
+  hideItem('to_left');
+  changeCurrentItem(n + 1);
+  showItem('from_right');
+}
+
+buttonLeft.addEventListener('click', function () {
+  if (isEnabled) {
+    previousItem (currentItem)
+  }
 })
 
-
-buttonRight.addEventListener('click', () => {
-  let index = Number(slider.style.backgroundImage.match(/\d/)[0]);
-  if (index > pictures.length - 1) {
-    index = 0;
+buttonRight.addEventListener('click', function () {
+  if (isEnabled) {
+    nextItem(currentItem)
   }
-  changeImageToNext(index);  
 })
 
-buttonLeft.addEventListener('click', () => {
-  let index = Number(slider.style.backgroundImage.match(/\d/)[0]) - 1;
-    if (index < 1) {
-    index = pictures.length;
-  }
-  changeImageToPrev(index);
+list.forEach((element, index) =>{
+  element.addEventListener('click', () => {
+    if (isEnabled) {
+      hideItem('to_left');
+      changeCurrentItem(index);
+      showItem('from_right')
+    }
+  })
 })
 
 let isSwap = false,
   pageX = null;
 
-slider.addEventListener('mousedown', (evt) => {
+itemsContainer.addEventListener('mousedown', (evt) => {
   isSwap = true;
   pageX = evt.pageX;
 })
 
-slider.addEventListener('mouseup', (evt) => {
+itemsContainer.addEventListener('mouseup', (evt) => {
   if (!isSwap) {
     return;
   }
 
-  let index = Number(slider.style.backgroundImage.match(/\d/)[0]);
-
-  if (pageX < evt.pageX) {
-    if (index > pictures.length - 1) {
-      index = 0;
-    }
-    changeImageToNext(index);
+  if (pageX > evt.pageX) {
+    if (isEnabled) {
+      nextItem(currentItem);
+    }    
   }
 
-  if (pageX > evt.pageX) {
-    index--;
-    if (index < 1) {
-      index = pictures.length;
-    }
-    changeImageToPrev(index);
+  if (pageX < evt.pageX) {
+    if (isEnabled) {
+      previousItem(currentItem);
+    }    
   }
 })
 
-*/
+itemsContainer.addEventListener('touchstart', (evt) => {
+  isSwap = true;
+  pageX = evt.touches[0].clientX;
+}, { passive: true })
+
+itemsContainer.addEventListener('touchend', (evt) => {
+  if (!isSwap) {
+    return;
+  }
+
+  if (pageX > evt.changedTouches[0].clientX) {
+    if (isEnabled) {
+      nextItem(currentItem);
+    }
+  }
+
+  if (pageX < evt.changedTouches[0].clientX) {
+    if (isEnabled) {
+      previousItem(currentItem);
+    }
+  }
+})
