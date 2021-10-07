@@ -3,4 +3,5 @@ import './control_panel_range.js';
 import './form.js';
 import './gallery.js';
 //import './scroll.js';
-import './slider.js';
+import './welcome_slider.js';
+import './video_slider.js'

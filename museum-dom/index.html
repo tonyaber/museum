@@ -228,35 +228,18 @@
             <input type="range" id="seek_bar" min="0" max="100" value="54">
             <button class="volume"></button>
             <input type="range" id="volume_bar"  min="0" max="1" step="0.1" value="0.40">
-            <button class="full_screen"></button>
+            <button class="full_screen full_screen_on"></button>
           </div>
-          <img src="assets/svg/play_big.svg" alt="youtube">
+          <p class="speed_count"></p>
+          <img class="speed_left" src="assets/svg/arrows_video_left.svg" alt="speed">
+          <img class="speed_right" src="assets/svg/arrows_video_rigth.svg" alt="speed">
+          <img class="play_icons" src="assets/svg/play_big.svg" alt="youtube">
         </div>        
         <div class="video_slider">
           <div class="video_slider_item">
             <iframe 
               width="452" height="254" 
               loading="lazy"
-              srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
-                html,body{height:100%,position:relative}
-                a{text-decoration:none}
-                .iframe_video,.iframe_play{position:absolute;width:100%;top:0;bottom:0;margin:auto}                
-                .iframe_container{position:relative; display:flex; justify-content:space-around;gap:10px;margin:15px 36px 0 10px; }
-                p{position:relative;max-width:329; white-space: nowrap;overflow:hidden;text-overflow:ellipsis;color:#ffffff;font-family: 'Roboto',sans-serif;
-                  font-style: normal; font-weight: normal;font-size: 18px;line-height: 38px;}
-                .iframe_mona_lisa{min-width:40px;min-height:40px}
-                .iframe_dots{miw-width:4px;min-height:16px;overflow:visible}
-                @media (max-width: 1024px){.iframe_container{margin-top:10px;gap:5px}}
-                </style>
-                <a href=https://www.youtube.com/embed/aWmJ5DgyWPI?autoplay=0>
-                <img class='iframe_video'src=https://img.youtube.com/vi/aWmJ5DgyWPI/hqdefault.jpg alt='Demo video'>
-                <div class='iframe_container'>
-                  <img class='iframe_mona_lisa' src='assets/svg/you_tube_icons_mona_lisa.svg' alt='icons mona lisa'>
-                  <p>Exposition - Le Corps et l’Ame. De Donatello a Michel-Ange</p>
-                  <img class='iframe_dots' src='assets/svg/dots.svg' alt='icons dots'>
-                </div>
-                <img class='iframe_play' src='assets/svg/youtube_icons_play.svg' width='68' height='48' alt='icons play youtube'>
-                </a>"
               src="https://www.youtube.com/embed/aWmJ5DgyWPI?autoplay=0" title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
@@ -266,26 +249,6 @@
             <iframe 
               width="452" height="254" 
               loading="lazy"
-              srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
-                html,body{height:100%,position:relative}
-                a{text-decoration:none}
-                .iframe_video,.iframe_play{position:absolute;width:100%;top:0;bottom:0;margin:auto}                
-                .iframe_container{position:relative; display:flex; justify-content:space-around;gap:10px;margin:15px 36px 0 10px; }
-                p{position:relative;max-width:329; white-space: nowrap;overflow:hidden;text-overflow:ellipsis;color:#ffffff;font-family: 'Roboto',sans-serif;
-                  font-style: normal; font-weight: normal;font-size: 18px;line-height: 38px;}
-                .iframe_mona_lisa{min-width:40px;min-height:40px}
-                .iframe_dots{miw-width:4px;min-height:16px;overflow:visible}
-                @media (max-width: 1024px){.iframe_container{margin-top:10px;gap:5px}}
-                </style>
-                <a href=https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=0>
-                <img class='iframe_video'src=https://img.youtube.com/vi/Vi5D6FKhRmo/hqdefault.jpg alt='Demo video'>
-                <div class='iframe_container'>
-                  <img class='iframe_mona_lisa' src='assets/svg/you_tube_icons_mona_lisa.svg' alt='icons mona lisa'>
-                  <p>Au Louvre ! La Venus de Milo</p>
-                  <img class='iframe_dots' src='assets/svg/dots.svg' alt='icons dots'>
-                </div>
-                <img class='iframe_play' src='assets/svg/youtube_icons_play.svg' width='68' height='48' alt='icons play youtube'>
-                </a>"
               src="https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=0" title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
@@ -295,26 +258,6 @@
             <iframe
               width="452" height="254" 
               loading="lazy"
-              srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
-                html,body{height:100%,position:relative}
-                a{text-decoration:none}
-                .iframe_video,.iframe_play{position:absolute;width:100%;top:0;bottom:0;margin:auto}                
-                .iframe_container{position:relative; display:flex; justify-content:space-around;gap:10px;margin:15px 36px 0 10px; }
-                p{position:relative;max-width:329; white-space: nowrap;overflow:hidden;text-overflow:ellipsis;color:#ffffff;font-family: 'Roboto',sans-serif;
-                  font-style: normal; font-weight: normal;font-size: 18px;line-height: 38px;}
-                .iframe_mona_lisa{min-width:40px;min-height:40px}
-                .iframe_dots{miw-width:4px;min-height:16px;overflow:visible}
-                @media (max-width: 1024px){.iframe_container{margin-top:10px;gap:5px}}
-                </style>
-                <a href=https://www.youtube.com/embed/NOhDysLnTvY?autoplay=0>
-                <img class='iframe_video'src=https://img.youtube.com/vi/NOhDysLnTvY/hqdefault.jpg alt='Demo video'>
-                <div class='iframe_container'>
-                  <img class='iframe_mona_lisa' src='assets/svg/you_tube_icons_mona_lisa.svg' alt='icons mona lisa'>
-                  <p>Promenade dans les collections mesopotamiennes</p>
-                  <img class='iframe_dots' src='assets/svg/dots.svg' alt='icons dots'>
-                </div>
-                <img class='iframe_play' src='assets/svg/youtube_icons_play.svg' width='68' height='48' alt='icons play youtube'>
-                </a>"
               src="https://www.youtube.com/embed/NOhDysLnTvY?autoplay=0" title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
