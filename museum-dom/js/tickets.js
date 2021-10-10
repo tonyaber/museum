@@ -20,7 +20,7 @@ const typesOfTickets = document.querySelectorAll('input[name="type_ticket"]'),
   dateLabel = form.querySelector('.form_tickets_card_label_info .icons_date'),
   timeInput = form.querySelector('input[name="ticket_time"]'),
   timeLabel = form.querySelector('.form_tickets_card_label_info .icons_time'),
-  nameInput = form.querySelector('.form_tickets_date_name');
+  emailInput = form.querySelector('.form_tickets_date_email');
 
 let type = 'permanent_exhibition',
   date = new Date();
@@ -129,6 +129,14 @@ dateInput.addEventListener('change', (evt) => {
   changePrice();
 })
 
-nameInput.addEventListener('input', (evt) => {
-  console.log(evt.target.value.match())
+
+
+emailInput.addEventListener('change', (evt) => {
+  const pattern = /^(?:[A-Z\d][A-Z\d_-]{3,15}|[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,10})$/i;
+  
+  if (!pattern.test(evt.target.value)) {
+    emailInput.setCustomValidity('Error')
+  } else {
+    emailInput.setCustomValidity('')
+  }
 })

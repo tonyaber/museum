@@ -99,8 +99,8 @@ window.onload = function () {
   const map = {};
   document.addEventListener('keydown', (evt) => {
     map[evt.code] = true;
-    
-    switch (evt.code) {
+    if (window.pageYOffset > 2600 && window.pageYOffset < 4600) {
+      switch (evt.code) {
       case 'Space':
         evt.preventDefault();
         videoPlayOrPause();
@@ -136,7 +136,9 @@ window.onload = function () {
           speedCount.style.opacity = '0';
         }, 500);
         break;
+      } 
     }  
   })
 }
+
 

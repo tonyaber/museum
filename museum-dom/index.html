@@ -456,12 +456,12 @@
           <h4>Booking tickets</h4>
           <p>Tour to Louvre</p>
           <div class="input_date">
-            <input type="text" name="ticket_date" placeholder="Date" onfocus="(this.type='date')" class="form_tickets_date_date" required>
-            <input type="text" name="ticket_time" placeholder="Time" onfocus="(this.type='time')" min="09:00" max="18:00" step="1" class="form_tickets_date_time" required>
+            <input type="text" name="ticket_date" placeholder="Date" onfocus="(this.type='date')" class="form_tickets_date_date" >
+            <input type="text" name="ticket_time" placeholder="Time" onfocus="(this.type='time')" class="form_tickets_date_time">
           </div>
-          <input type="text" placeholder="Name" class="form_tickets_date_name" minlength="3" maxlength="15" required>
-          <input type="email" placeholder="E-mail" class="form_tickets_date_email" required>
-          <input type="tel" placeholder="Phone" class="form_tickets_date_phone" required>
+          <input type="text" placeholder="Name" class="form_tickets_date_name" minlength="3" maxlength="15" onkeypress="return /^[a-zа-яё\s]+$/iu.test(event.key)">
+          <input type="email" placeholder="E-mail" class="form_tickets_date_email"> 
+          <input type="tel" placeholder="Phone" class="form_tickets_date_phone" onkeypress="return /^[0-9 ]+$/.test(event.key)">
           <select name="select">
             <option value="permanent_exhibition" selected>Permanent exhibition</option>
             <option value="temporary_exhibition">Temporary exhibition</option>
@@ -525,17 +525,17 @@
             <img src="assets/svg/mastercard.svg" class="card_mastercard" alt="card picture mastercard">
             <div class="form_tickets_card_inputs_cards">
               <label class="card_number">Card number<br>
-                <input type="number" name="card_number" required>
+                <input type="number" name="card_number">
               </label><br>
               Expiration date<br>
-                <input type="number" class="card_month" value="03" name="card_month" required>
-                <input type="number" class="card_year" value="2024" name="card_year" required>
+                <input type="number" class="card_month" value="03" name="card_month">
+                <input type="number" class="card_year" value="2024" name="card_year">
               <br>
               <label class="card_name">Cardholder name<br>
-                <input type="text" name="card_name" required>
+                <input type="text" name="card_name">
               </label>
               <label class="card_cvc">CVC/CVV<br>
-                <input type="number" name="card_cvc" required><br>
+                <input type="number" name="card_cvc"><br>
                 <span>The last<br>
                 3 or 4 digits<br>
                 on back<br>
