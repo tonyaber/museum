@@ -1,28 +1,5 @@
-window.onload = function () {
+window.onload = function () { 
   
-  //control panel 
-  const range = document.querySelectorAll('input[type="range"]');
-
-  //media
-
-  if (window.matchMedia('(max-width: 1024px) and (min-width: 769px) ').matches) {
-    range[0].setAttribute('value', '40');
-  } else if (window.matchMedia('(max-width: 768px) and (min-width: 421px)').matches) {
-    range[0].setAttribute('value', '31');
-  } else if (window.matchMedia('(max-width: 420px)').matches) {
-    range[0].setAttribute('value', '40');
-  }
-
-  range.forEach(item => {
-    item.addEventListener('input', () => {
-      let value = this.value;
-      if (value < 1) {
-        value = value * 100;
-      }
-      this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`
-    })
-  })
-
   // Video
   const video = document.querySelector('video');
 
@@ -30,15 +7,13 @@ window.onload = function () {
     volumeButton = document.querySelector('.volume'),
     fullScreenButton = document.querySelector('.full_screen'),
     playIcon = document.querySelector('.play_icons'),
-    controlPanel = document.querySelector('.video_control_panel'),
     speedRightIcons = document.querySelector('.speed_right'),
     speedLeftIcons = document.querySelector('.speed_left'),
-    speedCount = document.querySelector('.speed_count')
+    speedCount = document.querySelector('.speed_count'),
+    seekBar = document.querySelector('#seek_bar'),
+    volumeBar = document.querySelector('#volume_bar');
 
-  const seekBar = document.querySelector('#seek_bar');
-  const volumeBar = document.querySelector('#volume_bar');
-
-  const videoPlayOrPause= () => {
+  const videoPlayOrPause = () => {
     if (video.paused == true) {
       video.play();
       playButton.style.background = 'url(assets/svg/control_panel_pause.svg) no-repeat';
@@ -54,15 +29,22 @@ window.onload = function () {
     if (video.muted == false) {
       video.muted = true;
       volumeButton.style.background = 'url(assets/svg/mute.svg) no-repeat';
+      volumeBar.value = 0;
+      volumeBar.style.background = `linear-gradient(to right, #C4C4C4 0%, #C4C4C4 100%)`;
     } else {
       video.muted = false;
       volumeButton.style.background = 'url(assets/svg/volume.svg) no-repeat';
-    }
+      volumeBar.value = 0.4;
+      volumeBar.style.background = `linear-gradient(to right, #710707 0%, #710707 ${volumeBar.value * 100}%, #C4C4C4 ${volumeBar.value * 100}%, #C4C4C4 100%)`;
+     }
   }
 
   video.addEventListener('click', videoPlayOrPause);
   playButton.addEventListener('click', videoPlayOrPause);
   playIcon.addEventListener('click', videoPlayOrPause);
+  speedRightIcons.addEventListener('click', videoPlayOrPause);
+  speedLeftIcons.addEventListener('click', videoPlayOrPause);
+  speedCount.addEventListener('click', videoPlayOrPause);
 
   volumeButton.addEventListener('click', volumeMute);
 
@@ -85,7 +67,7 @@ window.onload = function () {
   video.addEventListener('timeupdate', () => {
     const value = (100 / video.duration) * video.currentTime;
 
-    seekBar.value = value;
+    seekBar.value = value || 0;
     seekBar.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value - 1}%, #C4C4C4 ${value + 1}%, #C4C4C4 100%)`;
     
     if (video.duration == video.currentTime) {
@@ -106,9 +88,12 @@ window.onload = function () {
     video.volume = volumeBar.value;
     if (volumeBar.value == 0) {
       volumeButton.style.background = 'url(assets/svg/mute.svg) no-repeat';
+      video.muted = true;
     } else {
+      video.muted = false;
       volumeButton.style.background = 'url(assets/svg/volume.svg) no-repeat';
     }
+    volumeBar.style.background = `linear-gradient(to right, #710707 0%, #710707 ${volumeBar.value * 100}%, #C4C4C4 ${volumeBar.value * 100}%, #C4C4C4 100%)`;
   });
 
   const map = {};
@@ -154,5 +139,4 @@ window.onload = function () {
     }  
   })
 }
-
 

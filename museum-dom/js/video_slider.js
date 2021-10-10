@@ -2,7 +2,11 @@ const items = document.querySelectorAll('.video_slider_items iframe'),
   itemsContainer = document.querySelector('.video_slider'),
   buttonRight = document.querySelector('.video_slider_right'),
   buttonLeft = document.querySelector('.video_slider_left'),
-  list = document.querySelectorAll('.video_slider_switch li');
+  list = document.querySelectorAll('.video_slider_switch li'),
+  video = document.querySelector('.video_container video'),
+  seekBar = document.querySelector('#seek_bar'),
+  playButton = document.querySelector('.play_pause'),
+  playIcon = document.querySelector('.play_icons');
 
 let currentItem = 0,
   isEnabled = true;
@@ -28,6 +32,12 @@ function hideItem() {
 
 function showItem() {
   left = 0;
+  video.pause();
+  video.poster = `assets/img/video_slider/video${currentItem}.jpg`;
+  video.src = `assets/video/video${currentItem}.mp4`;
+  seekBar.style.background = `linear-gradient(to right, #C4C4C4 0%, #C4C4C4 100%)`;
+  playButton.style.background = 'url(assets/svg/control_panel_play.svg) no-repeat';
+  playIcon.style.opacity = '1';
   for (let i = 0; i < 3; i++){
     let index = (currentItem + i + items.length) % items.length;
     items[index].classList.add('active');
