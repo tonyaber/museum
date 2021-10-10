@@ -457,31 +457,30 @@
           <p>Tour to Louvre</p>
           <div class="input_date">
             <input type="text" name="ticket_date" placeholder="Date" onfocus="(this.type='date')" class="form_tickets_date_date" required>
-            <input type="text" name="ticket_time" placeholder="Time" onfocus="(this.type='time')" class="form_tickets_date_time" required>
+            <input type="text" name="ticket_time" placeholder="Time" onfocus="(this.type='time')" min="09:00" max="18:00" step="1" class="form_tickets_date_time" required>
           </div>
-          <input type="text" placeholder="Name" class="form_tickets_date_name" required>
+          <input type="text" placeholder="Name" class="form_tickets_date_name" minlength="3" maxlength="15" required>
           <input type="email" placeholder="E-mail" class="form_tickets_date_email" required>
           <input type="tel" placeholder="Phone" class="form_tickets_date_phone" required>
           <select name="select">
-            <option value="" disabled selected hidden>Ticket Type</option>
-            <option value="value1">Permanent exhibition</option>
-            <option value="value2">Temporary exhibition</option>
-            <option value="value3">Combined Admission</option>
+            <option value="permanent_exhibition" selected>Permanent exhibition</option>
+            <option value="temporary_exhibition">Temporary exhibition</option>
+            <option value="combined_admission">Combined Admission</option>
           </select>
           <div class="form_tickets_count">
             <p>Entry ticket</p>
             <div class="form_tickets_count_grid">
-              <p>Basic 18+ (20 €)</p>
-              <div class="form_tickets_count_input">
-                <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-                <input type="number" min="0" max="20" value="2" readonly class="form_tickets_count_number">
-                <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+              <p>Basic 18+ (<span class="price_basic">20</span> €)</p>
+              <div class="form_tickets_count_input basic">
+                <button type="button">–</button>
+                <input type="number" min="0" max="20" value="1" readonly class="form_tickets_count_number">
+                <button type="button">+</button>
               </div>
-              <p>Senior 65+ (10 €)</p>
-              <div class="form_tickets_count_input">
-                <button type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-                <input type="number" min="0" max="20" value="2" readonly class="form_tickets_count_number">
-                <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+              <p>Senior 65+ (<span class="price_senior">10</span> €)</p>
+              <div class="form_tickets_count_input senior">
+                <button type="button">–</button>
+                <input type="number" min="0" max="20" value="1" readonly class="form_tickets_count_number">
+                <button type="button">+</button>
               </div>
             </div>
           </div>
@@ -493,24 +492,24 @@
               <h5>Tour to Louvre</h5>
               <p class="icons_date">Friday, August 19</p>
               <p class="icons_time">16 : 30</p>
-              <p class="icons_check">Temporary exhibition</p>
+              <p class="icons_check">Permanent exhibition</p>
             </div>
             <img src="assets/img/tickets.jpg" width="150" height="120" alt="museum">
           </div>
           <div class="form_tickets_card_count">
-            <div class="form_tickets_card_count_name">
-              <p><span>2</span>Basic (20 €)</p>
+            <div class="form_tickets_card_count_name basic">
+              <p><span class="count">1</span>Basic (<span class="price_basic">20</span> €)</p>
             </div>
-            <p>40 €</p>
-            <div class="form_tickets_card_count_name">
-              <p><span>2</span>Senior (10 €)</p>
+            <p class="price_basic_sum"><span>20</span> €</p>
+            <div class="form_tickets_card_count_name senior">
+              <p><span class="count">1</span>Senior (<span class="price_senior">10</span> €)</p>
             </div>
-            <p>20 €</p>
+            <p class="price_senior_sum"><span>10</span> €</p>
           </div>
           <hr>
           <div class="form_tickets_card_total">
             <p>Total:</p>
-            <p>60 €</p>
+            <p class="price">30 €</p>
           </div>
           <div class="form_tickets_card_svg">
             <svg class="back_card" width="360" height="211">

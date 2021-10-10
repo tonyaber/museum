@@ -1478,7 +1478,7 @@ form {
   width: 50%;
 }
 
-.form_tickets_card_count_name span {
+.form_tickets_card_count_name .count {
   margin-right: 10px;
   display: inline-block;
   width: 32px;
