@@ -4,4 +4,5 @@ import './form.js';
 import './gallery.js';
 //import './scroll.js';
 import './welcome_slider.js';
-import './video_slider.js'
+import './video_slider.js';
+import './tickets.js';
