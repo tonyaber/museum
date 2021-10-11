@@ -137,15 +137,21 @@ timeInput.addEventListener('change', () => {
   changePrice();
 })
 
-
-
+const createMessageValidation = (element, message) => {
+  const child = document.createElement('div');
+  element.parentNode.appendChild(child)
+  child.textContent = message;
+  
+  child.style.color = '#FF0000';
+  form.append(child);
+}
 
 emailInput.addEventListener('change', (evt) => {
-  const pattern = /^(?:[A-Z\d][A-Z\d_-]{3,15}|[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,10})$/i;
+  const pattern = /^([a-z\d_-]{3,15}@[a-z]{4,}\.[a-z]{2,})$/i;
   
   if (!pattern.test(evt.target.value)) {
-    emailInput.setCustomValidity('Error')
+    createMessageValidation(emailInput, 'invalid email')
   } else {
-    emailInput.setCustomValidity('')
+    console.log('2')
   }
 })

@@ -457,6 +457,7 @@
           <div class="input_date">
             <input type="text" name="ticket_date" placeholder="Date" onfocus="(this.type='date')" class="form_tickets_date_date" >
             <select id="ticket_time" placeholder="Time" class="form_tickets_date_time">
+              <option value="" disabled selected hidden>Time</option>
               <option value="9:00">9:00</option>
               <option value="9:30">9:30</option>
               <option value="10:00">10:00</option>
@@ -481,7 +482,7 @@
           <input type="text" placeholder="Name" class="form_tickets_date_name" minlength="3" maxlength="15" onkeypress="return /^[a-zа-яё\s]+$/iu.test(event.key)">
           <input type="email" placeholder="E-mail" class="form_tickets_date_email"> 
           <input type="tel" placeholder="Phone" class="form_tickets_date_phone" onkeypress="return /^[0-9 ]+$/.test(event.key)">
-          <select name="select">
+          <select name="select" class="select_type">
             <option value="permanent_exhibition" selected>Permanent exhibition</option>
             <option value="temporary_exhibition">Temporary exhibition</option>
             <option value="combined_admission">Combined Admission</option>

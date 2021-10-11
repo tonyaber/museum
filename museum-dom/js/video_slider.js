@@ -27,7 +27,7 @@ for (let i = 0; i < items.length; i++) {
 
 function hideItem() {
   isEnabled = false;
-  items.forEach(item => item.classList.remove('active'))
+  items.forEach(item => item.classList.remove('active'));
 }
 
 function showItem() {

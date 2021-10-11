@@ -1688,8 +1688,16 @@ form {
   background: url("assets/svg/date.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 155px 4px;
 }
 
-.form_tickets_date_time::-webkit-input-placeholder{
-  background: url("assets/svg/time.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 145px 4px;
+.form_tickets_date_time {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  color: #030303;
+  background: url("assets/svg/time.svg") no-repeat 12px center, url("assets/svg/arrow.svg") no-repeat 160px center;
 }
 
 .form_tickets_date_name::-webkit-input-placeholder{
@@ -1704,7 +1712,7 @@ form {
   background: url("assets/svg/tel.svg") no-repeat 12px 2px;
 }
 
-.form_tickets_date select {
+.form_tickets_date .select_type {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
