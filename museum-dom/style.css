@@ -1149,6 +1149,10 @@ iframe.active{
  margin-top: 25px;
 }
 
+.contacts_map {
+  width: 960px;
+  height: 620px;
+}
 .parallax {
   width: 100%;
   height: 400px;
