@@ -7,4 +7,5 @@ import './welcome_slider.js';
 import './video_slider.js';
 import './tickets.js';
 import './explore.js';
-import './gallery_animation.js'
+import './gallery_animation.js';
+import './map.js';

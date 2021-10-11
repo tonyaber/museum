@@ -1,4 +1,4 @@
-{
+const points = {
   "type": "FeatureCollection",
     "features": [
       {
@@ -18,7 +18,8 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            2.3333, 48.8602
+            2.3333,
+            48.8602
           ]
         }
       },
@@ -28,7 +29,8 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            2.3397, 48.8607
+            2.3397,
+            48.8607
           ]
         }
       },
@@ -38,7 +40,8 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            2.3330, 48.8619
+            2.3330,
+            48.8619
           ]
         }
       },
@@ -48,10 +51,13 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            2.3365, 48.8625
+            2.3365,
+            48.8625
           ]
         }
       }
 
     ]
 }
+
+export { points };
