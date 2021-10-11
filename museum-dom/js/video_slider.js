@@ -21,7 +21,7 @@ let left = 0;
 for (let i = 0; i < items.length; i++) {  
   if (items[i].classList[0] == 'active') {
     items[i].style.left = left + "%";
-    left += 33;
+    left += 34;
   }
 }
 

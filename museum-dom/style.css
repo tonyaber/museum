@@ -15,7 +15,7 @@ section:first-of-type {
 
 .container {
   margin: 0 auto;
-  max-width: 1440px;
+  width: 1440px;
 }
 
 .dark_section {
@@ -1799,9 +1799,12 @@ form {
     gap: 60px 108px
   }
 
-  .explore_section img {
+  .explore_section img,
+  .explore_section_img,
+  .explore_img {
     width: calc(50vw - 60px);
-    height: auto;
+    height: 48.61vw;
+    justify-content: center;
   }
 
   .explore_section .explore_section_img_filter {

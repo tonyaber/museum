@@ -20,7 +20,10 @@ const typesOfTickets = document.querySelectorAll('input[name="type_ticket"]'),
   dateLabel = form.querySelector('.form_tickets_card_label_info .icons_date'),
   timeInput = form.querySelector('.form_tickets_date_time'),
   timeLabel = form.querySelector('.form_tickets_card_label_info .icons_time'),
-  emailInput = form.querySelector('.form_tickets_date_email');
+  nameInput = form.querySelector('.form_tickets_date_name'),
+  emailInput = form.querySelector('.form_tickets_date_email'),
+  phoneInput = form.querySelector('.form_tickets_date_phone'),
+  btn = form.querySelector('.form_tickets_btn');
 
 let type = 'permanent_exhibition',
   date = new Date(),
@@ -40,6 +43,12 @@ const typePrice = {
     'name': 'Combined Admission'
   }
 };
+
+const validation = {
+  name: true,
+  email: true,
+  phone: true,
+}
 
 const options = { weekday: 'long', month: 'long', day: 'numeric' };
 
@@ -136,22 +145,70 @@ timeInput.addEventListener('change', () => {
   changeSelected(timeInput, timeInput.selectedIndex);
   changePrice();
 })
+const child = document.createElement('div');
 
-const createMessageValidation = (element, message) => {
-  const child = document.createElement('div');
-  element.parentNode.appendChild(child)
-  child.textContent = message;
-  
+const createMessageValidation = (element, message, condition) => {  
+  child.style.marginTop = '-20px';
+  child.textContent = message;  
   child.style.color = '#FF0000';
-  form.append(child);
+  child.textContent = message;
+  element.parentNode.append(child);
+  if (condition) {
+    child.style.marginTop = '-20px';
+    child.textContent = message;
+  } else {
+    child.style.marginTop = '0';
+    child.textContent = '';
+  }  
 }
+
+nameInput.addEventListener('change', (evt) => {
+  const pattern = /^[a-zа-яё\s]+$/iu;
+
+  if (!pattern.test(evt.target.value)) {
+    createMessageValidation(nameInput, 'Invalid name, please use only letters', true);
+    validation.name = false;
+  }
+  else {
+    createMessageValidation(nameInput, 'Invalid email, please use only letters', false);
+    validation.name = true;
+  }
+})
 
 emailInput.addEventListener('change', (evt) => {
   const pattern = /^([a-z\d_-]{3,15}@[a-z]{4,}\.[a-z]{2,})$/i;
   
   if (!pattern.test(evt.target.value)) {
-    createMessageValidation(emailInput, 'invalid email')
-  } else {
-    console.log('2')
+    createMessageValidation(emailInput, 'Invalid email, please use format username@example.com', true);
+    validation.email = false;
+  }
+  else {
+    createMessageValidation(emailInput, 'Invalid email, please use format username@example.com', false);
+    validation.email = true;
   }
 })
+
+phoneInput.addEventListener('change', (evt) => {
+  
+  if ( /^([\d]{1,10})$/.test(evt.target.value)
+    || /^([\d]{2,3}-[\d]{2,3}-[\d]{2,3})$/.test(evt.target.value)
+    || /^([\d]{2,3}\s[\d]{2,3}\s[\d]{2,3})$/.test(evt.target.value)) {
+    
+    createMessageValidation(phoneInput, 'Invalid phone, please use format 888-888-888', false);
+    validation.phone = true;
+  }
+  else {
+    createMessageValidation(phoneInput, 'Invalid phone, please use format 888-888-888', true);
+    validation.phone = false;
+  }
+})
+
+btn.addEventListener('click', (evt) => {
+   
+  if (!Object.values(validation).every(item => item==true)) {
+   evt.preventDefault();
+    createMessageValidation(btn, 'Some invalid data', true);
+  }
+})
+
+console.log('Score 150/150, с дополнительных возможностей - кпопка вверх');
