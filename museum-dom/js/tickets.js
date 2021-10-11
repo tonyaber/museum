@@ -14,16 +14,17 @@ const typesOfTickets = document.querySelectorAll('input[name="type_ticket"]'),
   formInputSeniorButtons = formInputSenior.querySelectorAll('button'),
   formInputSeniorNumber = formInputSenior.querySelector('input'),
   formPrice = form.querySelector('.form_tickets_card_total .price'),
-  formTypeOfTickets = form.querySelector('.form_tickets_date select'),
+  formTypeOfTickets = form.querySelector('.form_tickets_date select[name="select"]'),
   formTypeOfTicketsLabel = form.querySelector('.form_tickets_card_label_info .icons_check'),
   dateInput = form.querySelector('input[name="ticket_date"]'),
   dateLabel = form.querySelector('.form_tickets_card_label_info .icons_date'),
-  timeInput = form.querySelector('input[name="ticket_time"]'),
+  timeInput = form.querySelector('.form_tickets_date_time'),
   timeLabel = form.querySelector('.form_tickets_card_label_info .icons_time'),
   emailInput = form.querySelector('.form_tickets_date_email');
 
 let type = 'permanent_exhibition',
-  date = new Date();
+  date = new Date(),
+  time = '16:30';
 
 const typePrice = {
   'permanent_exhibition': {
@@ -60,6 +61,7 @@ const changePrice = () => {
   form.querySelector('.basic .count').textContent = inputBasicNumber.value;
   form.querySelector('.senior .count').textContent = inputSeniorNumber.value;
   dateLabel.textContent = date.toLocaleDateString("en-US", options);
+  timeLabel.textContent = time;
 }
 
 const changeCount = (inputNumber, inputFormNumber, operation) => {
@@ -128,6 +130,13 @@ dateInput.addEventListener('change', (evt) => {
   date = new Date(evt.target.value);
   changePrice();
 })
+
+timeInput.addEventListener('change', () => {
+  time = timeInput.value;
+  changeSelected(timeInput, timeInput.selectedIndex);
+  changePrice();
+})
+
 
 
 

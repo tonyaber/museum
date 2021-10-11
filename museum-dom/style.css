@@ -844,7 +844,7 @@ iframe.active{
 }
 
 .gallery_list_inner img {
-  transform: translateY(40%) scale(0.55);
+  transform: translateY(30%) scale(0.55);
   opacity: 0;
   margin-top: 24px;
   transition: 1s all;
@@ -1689,7 +1689,7 @@ form {
 }
 
 .form_tickets_date_time::-webkit-input-placeholder{
-  background: url("assets/svg/time.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 155px 4px;
+  background: url("assets/svg/time.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 145px 4px;
 }
 
 .form_tickets_date_name::-webkit-input-placeholder{
@@ -1729,6 +1729,29 @@ form {
 .form_tickets_card_label_info .icons_check {
   background: url("assets/svg/check_circle_outline.svg") no-repeat 0 2px;
   padding-left: 30px
+}
+
+.back_to_top {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  z-index: 9999;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: url("assets/svg/arrow_top.svg") no-repeat center center;
+  background-size: 60px 60px;
+  background-color: rgba(255,0,0,0.5);
+  cursor: pointer;
+  display: none;
+}
+
+.back_to_top:hover {
+  background-color: #e9ebec;
+}
+
+.back_to_top-show {
+  display: block;
 }
 
 @media (max-width: 1920px){

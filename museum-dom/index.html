@@ -456,7 +456,27 @@
           <p>Tour to Louvre</p>
           <div class="input_date">
             <input type="text" name="ticket_date" placeholder="Date" onfocus="(this.type='date')" class="form_tickets_date_date" >
-            <input type="text" name="ticket_time" placeholder="Time" onfocus="(this.type='time')" class="form_tickets_date_time">
+            <select id="ticket_time" placeholder="Time" class="form_tickets_date_time">
+              <option value="9:00">9:00</option>
+              <option value="9:30">9:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+            </select>          
           </div>
           <input type="text" placeholder="Name" class="form_tickets_date_name" minlength="3" maxlength="15" onkeypress="return /^[a-zа-яё\s]+$/iu.test(event.key)">
           <input type="email" placeholder="E-mail" class="form_tickets_date_email"> 
@@ -549,6 +569,7 @@
       </form>
     </div>
   </div>  
+  <div class="back_to_top"></div>
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
   <script type="module" src="./js/main.js"></script>
   </body>
