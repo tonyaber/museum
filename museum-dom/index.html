@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
   <link rel="icon" href="assets/favicon.ico">
   <title>museum</title>
 </head>
@@ -372,14 +374,8 @@
               <a href="mailto:info@louvre.fr">mail: info@louvre.fr</a>
             </address>
           </div>
-          <div class="contacts_map">
-            <picture>
-              <source srcset="assets/img/map_1024.jpg" media="(max-width: 1024px) and (min-width: 769px)">
-              <source srcset="assets/img/map_768.jpg" media="(max-width: 768px) and (min_width: 421px)">
-              <source srcset="assets/img/map_420.jpg" media="(max-width: 420px)">
-              <source srcset="assets/img/map.jpg">
-              <img src="assets/img/map.jpg" alt="map">
-            </picture>
+          <div class="contacts_map" id="map">
+            
           </div>
         </div>
       </div>
@@ -554,6 +550,21 @@
       </form>
     </div>
   </div>  
+    
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoidG9ueWFiZXJjaCIsImEiOiJja3VteGZ3NTEwaXZsMnBwMWMxMjloa2xrIn0.8KgP3NyQ10ssWV0wR6Nvcw';
+   
+    let map = new mapboxgl.Map({
+        container: 'map',
+        center: [
+          2.3364, 48.86091
+        ],
+        zoom: 10,
+        style: 'mapbox://styles/mapbox/streets-v9',
+        scrollZoom: false
+      });
+    
+  </script>
   <script type="module" src="./js/main.js"></script>
-</body>
+  </body>
 </html>
