@@ -1,5 +1,5 @@
-import { showDate } from './date.js';
-import { showGreeting } from './greeting.js';
+import { showDate } from './show-date.js';
+import { showGreeting } from './show_greeting.js';
 const time = document.querySelector('.time');
 
 const showTime = () => {
