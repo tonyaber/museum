@@ -4,6 +4,7 @@ import { setBg } from './set-bg.js';
 import { getWeather } from './get_weather.js';
 import './change_city.js';
 import { getQuotes } from './get_quotes.js';
+import './audio.js';
 
 showTime();
 setBg();
