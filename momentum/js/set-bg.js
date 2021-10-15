@@ -26,7 +26,7 @@ const setBg = () => {
   const bgNum = randomNumber >= 10 ? randomNumber : '0' + randomNumber;
 
   const img = new Image();
-  img.src = `./assets/img/${timeOfDate}/${bgNum}.jpg`;
+  img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDate}/${bgNum}.jpg`;
 
   img.onload = () => {
     body.style.background = `url(${img.src}) center/cover `;
