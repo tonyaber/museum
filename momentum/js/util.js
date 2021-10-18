@@ -7,4 +7,13 @@ const getTimeOfDay = (date) => {
   return Math.floor(hours / 6);
 }
 
-export { getRandomNum, getTimeOfDay };
+const formatTime = (time) => {
+  let minutes = Math.floor((time / 60));
+  let seconds = Math.floor(time - (minutes * 60));
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  };
+  return `${minutes}:${seconds}`;
+};
+
+export { getRandomNum, getTimeOfDay, formatTime };

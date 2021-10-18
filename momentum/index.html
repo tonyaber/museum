@@ -11,11 +11,25 @@
 <body>
   <header class="header">
     <div class="player">
-      <div class="player-controls">
-        <button class="play-prev player-icon"></button>
-        <button class="play player-icon"></button>
-        <button class="play-next player-icon"></button>
-      </div>
+      <div class="player-controls-and-seek">
+        <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+        </div>
+        <div class="player-title hide">
+          <p class="title-song"></p>
+          <div class="player-seek">
+            <span class="timeline">00:00</span>
+            <span>/</span>
+            <span class="duration">00:00</span>          
+            <input type="range" id="seek-audio" value="0" min="0" max="100">
+            <button class="volume volume-icons"></button>
+            <input type="range" id="seek-volume" value="0.5" min="0" max="1" step="0.1">
+          </div>
+        </div>
+        
+      </div>     
       <ul class="play-list">
       
       </ul>

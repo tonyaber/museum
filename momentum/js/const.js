@@ -4,6 +4,6 @@ const GREETING = {
   'blr': ['Дабранач', 'Добрай раніцы', 'Добры дзень', 'Добры вечар']
 }
 
-const TIMES_OF_DAY = ['night', 'morning', 'day', 'evening'];
+const TIMES_OF_DAY = ['night', 'morning', 'afternoon', 'evening'];
 
 export {GREETING, TIMES_OF_DAY}
