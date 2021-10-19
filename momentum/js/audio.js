@@ -12,7 +12,8 @@ const playListContainer = document.querySelectorAll('.play-item'),
   timeLine = seekContainer.querySelector('.timeline'),
   seekAudio = seekContainer.querySelector('#seek-audio'),
   volumeBtn = seekContainer.querySelector('.volume-icons'),
-  seekVolume = seekContainer.querySelector('#seek-volume');
+  seekVolume = seekContainer.querySelector('#seek-volume'),
+  smallBtnPlay = document.querySelectorAll('.play-list button');
 
 let isPlay = false,
   playNum = 0,
@@ -47,6 +48,7 @@ const playAudio = () => {
   titleContainer.classList.remove('hide');
   playListContainer[playNum].classList.add('item-active');
   btnPlay.classList.add('pause');
+  smallBtnPlay[playNum].classList.add('pause');
 
   titleSong.textContent = playList[playNum].title;
   audio.addEventListener('ended', playNext);
@@ -62,6 +64,7 @@ const pauseAudio = () => {
   titleContainer.classList.add('hide');
   playListContainer.forEach(item => item.classList.remove('item-active'));
   btnPlay.classList.remove('pause');
+  smallBtnPlay.forEach(item => item.classList.remove('pause'));
   
   audio.removeEventListener('ended', playNext);
   clearInterval(setInt);
@@ -101,19 +104,34 @@ const volumeMute = () => {
     seekVolume.style.background = `linear-gradient(to right, #d3d3d3 0%, #d3d3d3 ${volumeValue * 100}%, #ffffff ${volumeValue * 100}%, #ffffff 100%)`;
   }
 }
-
-btnPlay.addEventListener('click', () => {
+const playOrStop = () => {
   if (!isPlay) {
-    playAudio();
-  } else {
-    pauseAudio();
-  }
-});
+      playAudio();
+    } else {
+      pauseAudio();
+    }
+}
+
+
+btnPlay.addEventListener('click', playOrStop);
 
 seekAudio.addEventListener('change', changeSeekAudio);
 
 btnNext.addEventListener('click', playNext);
 btnPrev.addEventListener('click', playPrev);
+
+smallBtnPlay.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    if (playNum != index) {
+      pauseAudio();
+      currentTime = 0;
+      playNum = index;
+      playAudio();
+    } else {
+      playOrStop()
+    }
+  })
+})
 
 
 seekVolume.addEventListener('change', () => {

@@ -92,6 +92,13 @@ body {
   transition: .3s;  
 }
 
+.player-icon.small {
+ width: 15px;
+  height: 15px;
+  background-size: 15px;
+  margin-right: 10px ;
+}
+
 .player-icon:hover,
 .slider-icon:hover,
 .change-quote:hover,
@@ -330,6 +337,10 @@ body {
 
   .player-seek span {
     font-size: 8px;
+  }
+
+  .title-song {
+    font-size: 12px;
   }
 
   .volume-icons {
