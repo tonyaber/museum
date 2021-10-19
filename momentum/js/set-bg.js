@@ -22,7 +22,7 @@ const setBg = () => {
   isEnabled = false;
 
   const date = new Date();
-  const timeOfDate = TIMES_OF_DAY[getTimeOfDay(date)];  
+  const timeOfDate = TIMES_OF_DAY[getTimeOfDay(date)];
   const bgNum = randomNumber >= 10 ? randomNumber : '0' + randomNumber;
 
   const img = new Image();
@@ -31,7 +31,7 @@ const setBg = () => {
   img.onload = () => {
     body.style.background = `url(${img.src}) center/cover `;
   };
-  
+
   setTimeout(() => { isEnabled = true }, 1000);
 }
 
