@@ -1,3 +1,4 @@
+import { LANGUAGES } from './const.js';
 import { showTime } from './show_time.js';
 import './name.js';
 import { setBg } from './set-bg.js';
@@ -7,8 +8,12 @@ import { getQuotes } from './get_quotes.js';
 import './create-play-list.js';
 import './audio.js';
 
-showTime();
+let language = LANGUAGES[0]
+
+showTime(language);
 setBg();
-getWeather();
+getWeather(language);
 
 getQuotes();
+
+export { language };

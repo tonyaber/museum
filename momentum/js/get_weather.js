@@ -1,13 +1,17 @@
+import { language } from "./main.js";
+import { WEATHER } from "./const.js";
+
 const weatherIcon = document.querySelector('.weather-icon'),
   temperature = document.querySelector('.temperature'),
   weatherDescription = document.querySelector('.weather-description'),
   wind = document.querySelector('.wind'),
   humidity = document.querySelector('.humidity'),
-  lang = 'ru',
   apiKey = '9b2bb066347cf8cfae47ff441f848749';
 
-async function getWeather(city = localStorage.getItem('city') || 'Минск') {
+
+async function getWeather(lang, city = localStorage.getItem('city') || 'Minsk') {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${lang}&appid=${apiKey}&units=metric`;
+  console.log(url)
   fetch(url)
     .then(res => res.json())
     .then(data =>{

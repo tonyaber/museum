@@ -1,4 +1,3 @@
-import { getWeather } from "./get_weather.js";
 const getRandomNum = (min, max, randomNumber) => {
   return Math.round(Math.random() * (max - min) + min);
 }
