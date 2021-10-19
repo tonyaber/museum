@@ -1,5 +1,5 @@
 import { TIMES_OF_DAY } from "./const.js";
-import { getTimeOfDay, getRandomNum } from "./util.js";
+import { getTimeOfDay } from "./util.js";
 const body = document.querySelector('body'),
   btnPrev = body.querySelector('.slide-prev'),
   btnNext = body.querySelector('.slide-next');
@@ -17,7 +17,6 @@ const setBg = () => {
   fetch(url)
     .then(res => res.json())
     .then(data => {
-      console.log(data.urls.regular)
       img.src = data.urls.regular;
       img.onload = () => {
         body.style.background = `url(${img.src}) center/cover `;

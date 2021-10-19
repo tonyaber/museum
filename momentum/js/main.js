@@ -6,7 +6,7 @@ import './change_city.js';
 import { getQuotes } from './get_quotes.js';
 import './create-play-list.js';
 import './audio.js';
-import { setBg } from './set-bg-for-unpash.js';
+import { setBg } from './set-bg-for-flickr.js';
 
 
 showTime();
