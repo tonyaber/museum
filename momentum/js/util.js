@@ -1,3 +1,4 @@
+import { getWeather } from "./get_weather.js";
 const getRandomNum = (min, max, randomNumber) => {
   return Math.round(Math.random() * (max - min) + min);
 }
@@ -16,4 +17,14 @@ const formatTime = (time) => {
   return `${minutes}:${seconds}`;
 };
 
-export { getRandomNum, getTimeOfDay, formatTime };
+const setLocalStorage = (id, input) => {
+  localStorage.setItem(id, input.value);
+}
+
+const getLocalStorage = (id, input) => {  
+  if (localStorage.getItem(String(id))) {
+    input.value = localStorage.getItem(id);
+  }
+}
+
+export { getRandomNum, getTimeOfDay, formatTime, setLocalStorage, getLocalStorage };

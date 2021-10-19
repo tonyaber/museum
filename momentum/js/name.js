@@ -1,12 +1,6 @@
-const nameContainer = document.querySelector('.name');
-function setLocalStorage() {
-  localStorage.setItem('name', nameContainer.value);
-}
-window.addEventListener('beforeunload', setLocalStorage)
+import { setLocalStorage, getLocalStorage } from './util.js';
 
-function getLocalStorage() {
-  if (localStorage.getItem('name')) {
-    nameContainer.value = localStorage.getItem('name');
-  }
-}
-window.addEventListener('load', getLocalStorage)
+const nameContainer = document.querySelector('.name');
+
+window.addEventListener('beforeunload', () => setLocalStorage('name', nameContainer));
+window.addEventListener('load', () => getLocalStorage('name', nameContainer));
