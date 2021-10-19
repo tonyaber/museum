@@ -94,9 +94,7 @@ const volumeMute = () => {
     volumeBtn.classList.add('mute');
     seekVolume.value = 0;
     seekVolume.style.background = `linear-gradient(to right, #ffffff 0%, #ffffff 100%)`;
-    console.log(seekVolume)
   } else {
-    console.log(volumeValue)
     audio.muted = false;
     volumeBtn.classList.remove('mute');
     seekVolume.value = volumeValue;

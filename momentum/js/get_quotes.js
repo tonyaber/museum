@@ -6,10 +6,9 @@ const quotes = 'js/data.json',
   btnQuote = document.querySelector('.change-quote');
 
 async function getQuotes() {
-  const quotes = 'js/data.json';
   const res = await fetch(quotes);
   const data = await res.json();
-  const index = getRandomNum(0, data.length);
+  const index = getRandomNum(0, data.length - 1);
   quote.textContent = data[index].text;
   author.textContent = data[index].author;
 }

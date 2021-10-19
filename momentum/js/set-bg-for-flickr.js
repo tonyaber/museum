@@ -20,13 +20,14 @@ const setBg = () => {
   const date = new Date();
   const timeOfDate = TIMES_OF_DAY[getTimeOfDay(date)];
   const img = new Image();
-  const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0f15ff623f1198a1f7f52550f8c36057&tags=${timeOfDate}&extras=url_l&format=json&nojsoncallback=1`;
+  const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0f15ff623f1198a1f7f52550f8c36057&tags=${timeOfDate}&extras=url_l&format=json&nojsoncallback=1&per_page=30`;
 
   fetch(url)
     .then(res => res.json())
     .then(data => {
       const dataSize = data['photos']['photo'].length - 1
       let randomNumber = getRandomNum(0, dataSize);
+      console.log(dataSize)
       changeImage(img, randomNumber, data);
       btnPrev.addEventListener('click', () => {
         if (isEnabled) {
