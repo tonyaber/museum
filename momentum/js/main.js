@@ -8,12 +8,12 @@ import { getQuotes } from './get_quotes.js';
 import './create-play-list.js';
 import './audio.js';
 
-let language = LANGUAGES[0]
+let language = LANGUAGES[1]
 
 showTime(language);
 setBg();
 getWeather(language);
 
-getQuotes();
+getQuotes(language);
 
 export { language };

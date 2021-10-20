@@ -22,14 +22,26 @@ const WEATHER = {
     'lang': 'en',
     'wind': 'Wind speed',
     'wind_units': 'm/s',
-    'humidity': 'Humidity'
+    'humidity': 'Humidity',
+    'err': 'Data loading error. Enter the city again',
   },
   'ru': {
     'lang': 'ru',
     'wind': 'Скорость ветра',
     'wind_units': 'м/с',
-    'humidity': 'Влажность'
+    'humidity': 'Влажность',
+    'err': 'Ошибка загрузки данных. Введите город еще раз',
   },
 }
 
-export {LANGUAGES ,GREETING, TIMES_OF_DAY, DATE, WEATHER}
+const QUOTES = {
+  'ru': 'js/data/quotes-ru.json',
+  'us': 'js/data/quotes-us.json'
+}
+
+const DEFAULT_CITY = {
+  'ru': 'Минск',
+  'us': 'Minsk'
+}
+
+export { LANGUAGES, GREETING, TIMES_OF_DAY, DATE, WEATHER, QUOTES, DEFAULT_CITY }

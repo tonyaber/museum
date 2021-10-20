@@ -3,7 +3,6 @@ import { setLocalStorage, getLocalStorage } from './util.js';
 import { language } from "./main.js";
 
 const city = document.querySelector('.city');
-city.value = 'Минск';
 
 window.addEventListener('beforeunload', () => setLocalStorage('city', city));
 
