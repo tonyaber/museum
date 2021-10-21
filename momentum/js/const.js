@@ -44,4 +44,21 @@ const DEFAULT_CITY = {
   'us': 'Minsk'
 }
 
-export { LANGUAGES, GREETING, TIMES_OF_DAY, DATE, WEATHER, QUOTES, DEFAULT_CITY }
+const SETTING = {
+  'ru': {
+    'language': 'Язык',
+    'russian': 'Русский',
+    'english': 'Английский',
+    'background': 'Фон',
+    'placeholder': 'Введите свой тег'
+  },
+  'us': {
+    'language': 'Language',
+    'russian': 'Russian',
+    'english': 'English',
+    'background': 'Background',
+    'placeholder': 'Enter your tags'
+  }
+}
+
+export { LANGUAGES, GREETING, TIMES_OF_DAY, DATE, WEATHER, QUOTES, DEFAULT_CITY, SETTING }
