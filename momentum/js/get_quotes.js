@@ -1,6 +1,6 @@
 import { getRandomNum } from "./util.js";
 import { QUOTES } from "./const.js";
-import { language } from "./main.js";
+import { language } from "./change-language.js";
 
 const quote = document.querySelector('.quote'),
   author = document.querySelector('.author'),

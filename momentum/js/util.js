@@ -33,4 +33,4 @@ const createElement = (template) => {
   return newElement;
 };
 
-export { getRandomNum, getTimeOfDay, formatTime, setLocalStorage, getLocalStorage, createElement };
+export { getRandomNum, getTimeOfDay, formatTime, setLocalStorage, getLocalStorage,createElement };
