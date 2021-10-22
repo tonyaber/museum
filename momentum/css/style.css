@@ -16,7 +16,9 @@ body {
   font-size: 16px;
   color: #fff;
   text-align: center;
-  background: url("../assets/img/bg.jpg") center/cover, rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+  background-position: center;
+  background-size: cover;
   background-blend-mode: multiply;
   transition: background-image 1s ease-in-out;
 }
@@ -361,7 +363,7 @@ li{
 }
 
 .language {
-  background-color:rgba(0, 0, 0, 1);
+  background-color:#303030
 }
 
 .setting-content li {
@@ -370,8 +372,10 @@ li{
   opacity: 1;
   text-align: left;
 }
-
-.language_list label,
+.setting-content input {
+  margin-right: 10px;
+}
+.language_list_item,
 .background-list label{
   display: block;
   text-align: left;
@@ -379,9 +383,9 @@ li{
   padding: 12px 20px;
 }
 
-.language_list label:hover,
+.language_list_item:hover,
 .background-list label:hover{
-  background-color:rgba(0, 0, 0, 1)
+  background-color:#303030
 }
 
 .setting-container-background {
@@ -407,6 +411,10 @@ li{
 
 .background-list {
   display: none;
+}
+
+.background-list input[type="text"]{
+  width: 15vw;
 }
 
 

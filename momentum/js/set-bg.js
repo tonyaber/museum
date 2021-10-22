@@ -5,47 +5,53 @@ const body = document.querySelector('body'),
   btnNext = body.querySelector('.slide-next');
 
 let randomNumber = getRandomNum(1, 20),
-  isEnabled = true;
+  isEnabled = true,
+  bgNum = randomNumber;
 
-
-const getSlideNext = () => {
-  randomNumber = randomNumber >= 20 ? 1 : ++randomNumber;
-  setBg();
-}
-
-const getSlidePrev = () => {
-  randomNumber = randomNumber <= 1 ? 20 : --randomNumber;
-  setBg();
-}
-
-const setBg = () => {
+const changeImage = () => {
+  const img = new Image(),
+    date = new Date(),
+    timeOfDate = TIMES_OF_DAY[getTimeOfDay(date)];
+  
   isEnabled = false;
+  bgNum = randomNumber >= 10 ? randomNumber : '0' + randomNumber;
 
-  const date = new Date();
-  const timeOfDate = TIMES_OF_DAY[getTimeOfDay(date)];
-  const bgNum = randomNumber >= 10 ? randomNumber : '0' + randomNumber;
-
-  const img = new Image();
   img.src = `https://raw.githubusercontent.com/tonyaber/stage1-tasks/assets/images/${timeOfDate}/${bgNum}.jpg`;
-
   img.onload = () => {
-    body.style.background = `url(${img.src}) center/cover `;
+    body.style.backgroundImage = `url(${img.src})`;
   };
-
   setTimeout(() => { isEnabled = true }, 1000);
 }
 
-btnPrev.addEventListener('click', () => {
+const getSlideNext = () => {
   if (isEnabled) {
-    getSlidePrev();
+    randomNumber = randomNumber >= 20 ? 1 : ++randomNumber;
+    changeImage();
   }
-});
+  
+}
 
-btnNext.addEventListener('click', () => {
+const getSlidePrev = () => {
   if (isEnabled) {
-    getSlideNext();
+    randomNumber = randomNumber <= 1 ? 20 : --randomNumber;
+    changeImage();
   }
-});
+ 
+}
 
-export { setBg };
+const setBg = () => {
+  changeImage();
+  btnPrev.addEventListener('click', getSlidePrev);
+  btnNext.addEventListener('click', getSlideNext);
+}
+
+
+const removeListenerGitHub = () => {
+  btnPrev.removeEventListener('click', getSlidePrev);
+  btnNext.removeEventListener('click', getSlideNext);
+}
+
+
+
+export { setBg, removeListenerGitHub};
 

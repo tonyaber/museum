@@ -26,11 +26,4 @@ const getLocalStorage = (id, input) => {
   }
 }
 
-const createElement = (template) => {
-  const newElement = document.createElement('div');
-  newElement.innerHTML = template;
-  console.log(template)
-  return newElement;
-};
-
-export { getRandomNum, getTimeOfDay, formatTime, setLocalStorage, getLocalStorage,createElement };
+export { getRandomNum, getTimeOfDay, formatTime, setLocalStorage, getLocalStorage};

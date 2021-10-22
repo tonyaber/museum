@@ -36,15 +36,15 @@ settingContentBackground.addEventListener('click', (evt) => {
 languageItem.addEventListener('click', () => {
   backgroundList.style.display = 'none';
   languageList.style.display = "block";
-  languageItem.style.background = 'rgba(0, 0, 0, 1)';
-  backgroundItem.style.background = 'rgba(0, 0, 0, 0)';
+  languageItem.style.background = 'rgba(48, 48, 48, 1)';
+  backgroundItem.style.background = 'rgba(48, 48, 48, 0)';
 })
 
 backgroundItem.addEventListener('click', () => {
   languageList.style.display = "none";
   backgroundList.style.display = 'block';
-  languageItem.style.background = 'rgba(0, 0, 0, 0)';
-  backgroundItem.style.background = 'rgba(0, 0, 0, 1)';
+  languageItem.style.background = 'rgba(48, 48, 48, 0)';
+  backgroundItem.style.background = 'rgba(48, 48, 48, 1)';
 })
 
 export { setSetting };

@@ -1,4 +1,3 @@
-
 import { changeLanguage, language} from './change-language.js';
 import { showTime } from './show_time.js';
 import './name.js';
@@ -8,12 +7,11 @@ import './change_city.js';
 import { getQuotes } from './get_quotes.js';
 import './create-play-list.js';
 import './audio.js';
+import './change-bg.js'
 
 changeLanguage();
-
-showTime(language);
 setBg();
+showTime(language);
 getWeather(language);
-
 getQuotes(language);
 
