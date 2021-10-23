@@ -8,6 +8,7 @@ import { getQuotes } from './get_quotes.js';
 import './create-play-list.js';
 import './audio.js';
 import './change-bg.js'
+import './hide-elements.js'
 
 changeLanguage();
 setBg();

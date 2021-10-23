@@ -45,7 +45,6 @@ const playAudio = () => {
   audio.play();
   isPlay = true;
 
-  titleContainer.classList.remove('hide');
   playListContainer[playNum].classList.add('item-active');
   btnPlay.classList.add('pause');
   smallBtnPlay[playNum].classList.add('pause');
@@ -61,7 +60,6 @@ const pauseAudio = () => {
   currentTime = audio.currentTime;
   isPlay = false;
   
-  titleContainer.classList.add('hide');
   playListContainer.forEach(item => item.classList.remove('item-active'));
   btnPlay.classList.remove('pause');
   smallBtnPlay.forEach(item => item.classList.remove('pause'));

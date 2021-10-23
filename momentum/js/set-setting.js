@@ -8,17 +8,30 @@ const languageContainer = document.querySelector('.language'),
   settingBtn = settingContainer.querySelector('.setting-icons'),
   settingContent = settingContainer.querySelector('.setting-content'),
   settingContentBackground = settingContainer.querySelector('.setting-container-background'),
-  languageItem = settingContainer.querySelector('.language'),
-  languageList = settingContainer.querySelector('.language_list'),
-  backgroundItem = settingContainer.querySelector('.background'),
-  backgroundList = settingContainer.querySelector('.background-list');
+  settingItem = settingContainer.querySelectorAll('.setting-item'),
+  settingList = settingContainer.querySelectorAll('.setting-list'),
+  elements = settingContainer.querySelector('.elements'),
+  elementsDate = settingContainer.querySelector('#elements-date'),
+  elementsTime = settingContainer.querySelector('#elements-time'),
+  elementsWeather = settingContainer.querySelector('#elements-weather'),
+  elementsGreeting = settingContainer.querySelector('#elements-greeting'),
+  elementsQuotes = settingContainer.querySelector('#elements-quotes'),
+  elementsAudio = settingContainer.querySelector('#elements-audio');
+
 
 const setSetting = (language) => {
   languageContainer.textContent = SETTING[language]['language'];
   backgroundContainer.textContent = SETTING[language]['background'];
   russianLang.textContent = SETTING[language]['russian'];
   englishLang.textContent = SETTING[language]['english'];
-  tagsInput.setAttribute('placeholder', SETTING[language]['placeholder'] )
+  tagsInput.setAttribute('placeholder', SETTING[language]['placeholder']);
+  elements.textContent = SETTING[language]['elements'];
+  elementsDate.textContent = SETTING[language]['elements-date'];
+  elementsTime.textContent = SETTING[language]['elements-time'];
+  elementsWeather.textContent = SETTING[language]['elements-weather'];
+  elementsGreeting.textContent = SETTING[language]['elements-greeting'];
+  elementsQuotes.textContent = SETTING[language]['elements-quotes'];
+  elementsAudio.textContent = SETTING[language]['elements-audio'];
 }
 
 settingBtn.addEventListener('click', () => {
@@ -33,18 +46,13 @@ settingContentBackground.addEventListener('click', (evt) => {
   }
 })
 
-languageItem.addEventListener('click', () => {
-  backgroundList.style.display = 'none';
-  languageList.style.display = "block";
-  languageItem.style.background = 'rgba(48, 48, 48, 1)';
-  backgroundItem.style.background = 'rgba(48, 48, 48, 0)';
-})
-
-backgroundItem.addEventListener('click', () => {
-  languageList.style.display = "none";
-  backgroundList.style.display = 'block';
-  languageItem.style.background = 'rgba(48, 48, 48, 0)';
-  backgroundItem.style.background = 'rgba(48, 48, 48, 1)';
+settingItem.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    settingList.forEach(elem => elem.classList.add('setting-hide'));
+    settingList[index].classList.remove('setting-hide');
+    settingItem.forEach(elem => elem.classList.remove('setting-select-item'));
+    item.classList.add('setting-select-item');
+  })
 })
 
 export { setSetting };

@@ -17,10 +17,10 @@
           <button class="play player-icon"></button>
           <button class="play-next player-icon"></button>
         </div>
-        <div class="player-title hide">
-          <p class="title-song"></p>
+        <div class="player-title">
+          <p class="title-song">Aqua Caelestis</p>
           <div class="player-seek">
-            <span class="timeline">00:00</span>
+            <span class="timeline">0:00</span>
             <span>/</span>
             <span class="duration">00:00</span>          
             <input type="range" id="seek-audio" value="0" min="0" max="100">
@@ -64,8 +64,8 @@
         <button class="footer-icons setting-icons"></button>
         <div class="setting-container-background">
           <ul class="setting-content">
-            <li class="language"></li>
-            <div class="language_list">
+            <li class="language setting-item setting-select-item"></li>
+            <div class="language_list setting-list setting-show">
               <div class="language_list_item">
                 <input type="radio" name="language" id="ru" value="ru"><label for="ru"></label>
               </div>
@@ -73,24 +73,71 @@
                 <input type="radio" name="language" id="us" value="us"><label for="us"></label>
               </div>          
             </div>
-            <li class="background"></li>
-            <div class="background-list">
+            <li class="background setting-item"></li>
+            <div class="background-list setting-list setting-hide">
               <label for="github"><input type="radio" name="background" id="github" value="github" checked>GitHub</label>
               <label for="flickr"><input type="radio" name="background" id="flickr" value="flickr">Flickr</label>
               <label for="unsplash"><input type="radio" name="background" id="unsplash" value="unsplash">Unsplash</label>
               <label for="teg"><input type="radio" name="background" id="teg" value="teg">
                 <input type="text" placeholder=""></label>
             </div>
+            <li class="elements setting-item"></li>
+            <div class="elements-list setting-list setting-hide">
+              <label>
+                <div>
+                  <input type="checkbox" value="date">
+                  <span class="slider round"></span>
+                </div>
+                <span id="elements-date"></span>             
+              </label>
+              <label>
+                <div>
+                  <input type="checkbox" value="time">
+                  <span class="slider round"></span>
+                </div>
+                <span id="elements-time"></span>
+              </label>
+              <label>
+                <div>
+                  <input type="checkbox" value="weather">
+                  <span class="slider round"></span>
+                </div>
+                <span id="elements-weather"></span>
+              </label>
+              <label>
+                <div>
+                  <input type="checkbox" value="greeting-container">
+                  <span class="slider round"></span>
+              </div>
+              <span id="elements-greeting"></span>
+              </label>
+              <label>
+                <div>
+                  <input type="checkbox" value="quotes">
+                  <span class="slider round"></span>
+                </div>
+                <span id="elements-quotes"></span>
+              </label>
+              <label>
+                <div>
+                  <input type="checkbox" value="player">
+                  <span class="slider round"></span>
+                </div>
+                <span id="elements-audio"></span>
+              </label>
+            </div>
           </ul>
         </div>
                
       </div>      
     </div>
-    <button class="change-quote"></button>
-    <div>
-      <div class="quote"></div>
-      <div class="author"></div>
-    </div>
+    <div class="quotes">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>    
   </footer>
   <script type="module" src="./js/main.js"></script>
 </body>

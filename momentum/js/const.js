@@ -50,14 +50,28 @@ const SETTING = {
     'russian': 'Русский',
     'english': 'Английский',
     'background': 'Фон',
-    'placeholder': 'Введите свой тег'
+    'placeholder': 'Введите свой тег',
+    'elements': 'Скрыть',
+    'elements-date': 'Дата',
+    'elements-time': 'Время',
+    'elements-weather': 'Погода',
+    'elements-greeting': 'Приветствие',
+    'elements-quotes': 'Цитаты',
+    'elements-audio': 'Плеер',
   },
   'us': {
     'language': 'Language',
     'russian': 'Russian',
     'english': 'English',
     'background': 'Background',
-    'placeholder': 'Enter your tags'
+    'placeholder': 'Enter your tags',
+    'elements': 'Hide',
+    'elements-date': 'Date',
+    'elements-time': 'Time',
+    'elements-weather': 'Weather',
+    'elements-greeting': 'Greeting',
+    'elements-quotes': 'Quotes',
+    'elements-audio': 'Audio',
   }
 }
 
