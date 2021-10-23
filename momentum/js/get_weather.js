@@ -6,6 +6,7 @@ const weatherIcon = document.querySelector('.weather-icon'),
   wind = document.querySelector('.wind'),
   humidity = document.querySelector('.humidity'),
   apiKey = '9b2bb066347cf8cfae47ff441f848749';
+  
 
 async function getWeather(lang, city = localStorage.getItem('city') || 'Минск') {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${lang}&appid=${apiKey}&units=metric`;

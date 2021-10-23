@@ -15,7 +15,6 @@ let isEnabled = true,
 const changeImage = (img, randomNumber, data) => {
   isEnabled = false;  
   img.src = data[randomNumber]['url_l'];
-
   if (img.src != undefined) {
     img.onload = () => {
       body.style.backgroundImage = `url(${img.src})`;
@@ -39,7 +38,7 @@ const getSliderNext = () => {
 }
 
 const setBgForFrickr = () => {
-  const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0f15ff623f1198a1f7f52550f8c36057&tags=${timeOfDate},nature&extras=url_l&format=json&nojsoncallback=1&per_page=20`;
+  const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0f15ff623f1198a1f7f52550f8c36057&tags=${timeOfDate},nature&tag_mode=all&extras=url_l&format=json&nojsoncallback=1&per_page=20`;
 
   fetch(url)
     .then(res => res.json())

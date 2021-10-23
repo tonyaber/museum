@@ -5,6 +5,7 @@ const LANGUAGES = [
 
 const GREETING = {
   'us': ['Good night', 'Good morning', 'Good afternoon', 'Good evening'],
+
   'ru': ['Доброй ночи', 'Доброе утро', 'Добрый день', 'Добрый вечер'],
   'blr': ['Дабранач', 'Добрай раніцы', 'Добры дзень', 'Добры вечар']
 }
@@ -24,6 +25,7 @@ const WEATHER = {
     'wind_units': 'm/s',
     'humidity': 'Humidity',
     'err': 'Data loading error. Enter the city again',
+    'city': 'Minsk',
   },
   'ru': {
     'lang': 'ru',
@@ -31,6 +33,7 @@ const WEATHER = {
     'wind_units': 'м/с',
     'humidity': 'Влажность',
     'err': 'Ошибка загрузки данных. Введите город еще раз',
+    'city': 'Минск'
   },
 }
 
@@ -75,4 +78,16 @@ const SETTING = {
   }
 }
 
-export { LANGUAGES, GREETING, TIMES_OF_DAY, DATE, WEATHER, QUOTES, DEFAULT_CITY, SETTING }
+
+const PLACEHOLDER = {
+  'ru': {
+    'name':'[Укажите имя]',
+    'city': '[Укажите город]'
+  },
+  'us': {
+    'name': '[Enter name]',
+    'city': '[Enter city]'
+  },
+}
+
+export { LANGUAGES, GREETING, TIMES_OF_DAY, DATE, WEATHER, QUOTES, DEFAULT_CITY, SETTING,PLACEHOLDER }

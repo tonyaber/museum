@@ -6,7 +6,8 @@ import { getQuotes } from './get_quotes.js';;
 
 const settingContainer = document.querySelector('.setting-container'),
   languageRu = settingContainer.querySelector('#ru'),
-  languageUs = settingContainer.querySelector('#us');
+  languageUs = settingContainer.querySelector('#us'),
+  city = document.querySelector('.city');
 
 let language = localStorage.getItem('language') || LANGUAGES[1];
 
@@ -24,7 +25,7 @@ const changeLanguage = () => {
       language = LANGUAGES[1]
       clearTimeout(timer);
       showTime(language);
-      getWeather(language);
+      getWeather(language, city.value);
       getQuotes(language);
       setSetting(language);
     }
@@ -35,7 +36,7 @@ const changeLanguage = () => {
       language = LANGUAGES[0]
       clearTimeout(timer);
       showTime(language);
-      getWeather(language);
+      getWeather(language, city.value);
       getQuotes(language);
       setSetting(language);
     }

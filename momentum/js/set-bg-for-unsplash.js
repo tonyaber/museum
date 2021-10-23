@@ -15,7 +15,7 @@ const changeImage = (timeOfDate = TIMES_OF_DAY[getTimeOfDay(date)]) => {
   fetch(url)
     .then(res => res.json())
     .then(data => {
-      img.src = data.urls.regular;
+      img.src = data.urls.regular;     
       img.onload = () => {
         body.style.backgroundImage = `url(${img.src})`;
       };

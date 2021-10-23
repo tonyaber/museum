@@ -1,7 +1,6 @@
 const elementsList = document.querySelectorAll('.elements-list label input');
 
 elementsList.forEach(item => {
-  console.log(localStorage.getItem(item.value))
   if (localStorage.getItem(item.value)=='off') {
     const element = document.querySelector(`.${item.value}`);
     element.classList.add('hide');
