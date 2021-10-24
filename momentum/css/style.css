@@ -580,6 +580,9 @@ input:checked + .slider:before {
   margin: 5px 0;
 }
 
+.checked {
+  text-decoration: line-through;
+}
 .delete-icons {
   position: absolute;
   right: 0;

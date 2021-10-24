@@ -7,65 +7,94 @@ const todoBtn = document.querySelector('.todo-icons'),
   todoList = todoContent.querySelector('.todo-list'),
   clearBtn = todoContent.querySelector('.clear'),
   todoContainer = document.querySelector('.todo-container-background');
-
 const createTodo = (lang) => {
-  label.textContent = TODO[lang]['label'];
-  newTodoBtn.textContent = TODO[lang]['save'];
-  clearBtn.textContent = TODO[lang]['clear'];
-  newTodo.setAttribute('placeholder', TODO[lang]['placeholder'])
+    label.textContent = TODO[lang]['label'];
+    newTodoBtn.textContent = TODO[lang]['save'];
+    clearBtn.textContent = TODO[lang]['clear'];
+    newTodo.setAttribute('placeholder', TODO[lang]['placeholder'])
 }
 
-  
-const createTodoItem = (value) => {
-  const li = document.createElement('li');
-  li.textContent = value;
-  const input = document.createElement('input');
-  input.setAttribute('type', 'checkbox');
-  input.addEventListener('click', (evt) => {
+const onPageLoated = (lang)=> {
+  const listenDeleteTodo = (element) =>{
+    element.addEventListener("click", (event) => {
+      element.parentElement.remove();
+      event.stopPropagation();
+      localStorage.setItem("todoList", todoList.innerHTML);
+    });
+  }
+    
+  const createTodoItem = (value) => {
+    const li = document.createElement('li');
+    li.textContent = value;
+
+    const input = document.createElement('input');
+    input.setAttribute('type', 'checkbox');    
+    li.prepend(input);
+
+    const btn = document.createElement('button');
+    btn.classList.add('footer-icons', 'delete-icons')
+    li.append(btn);
+
+    todoList.append(li);
+    newTodo.value = '';
+    listenDeleteTodo(btn);
+  }
+
+  const onClickTodo = (evt) => {
     if (evt.target.checked) {
-      li.style.textDecoration = 'line-through';
+      evt.target.parentElement.classList.add('checked');
     } else {
-      li.style.textDecoration = 'none';
+      evt.target.parentElement.classList.remove('checked');
+    }
+  }
+  todoList.addEventListener("click", onClickTodo);
+
+  todoBtn.addEventListener('click', () => {
+    todoContainer.classList.remove('hide');
+    todoContainer.classList.add('show');
+  })
+
+  todoContainer.addEventListener('click', (evt) => {
+    if (evt.target == todoContainer) {
+      todoContainer.classList.add('hide');
+      todoContainer.classList.remove('show');
+    }  
+  })
+
+  newTodoBtn.addEventListener('click', () => {
+    if (newTodo.value.length > 0) {
+      createTodoItem(newTodo.value);
+      localStorage.setItem("todoList", todoList.innerHTML);
     }
   })
-  li.prepend(input);
-  const btn = document.createElement('button');
-  btn.classList.add('footer-icons', 'delete-icons')
-  li.append(btn);
-  todoList.append(li);
-  newTodo.value = '';
-  btn.addEventListener("click", () => {
-    btn.parentElement.remove();
+
+  newTodo.addEventListener("keypress", (keyPressed) => {
+    const keyEnter = 13;
+    if (keyPressed.which == keyEnter && newTodo.value.length > 0) {
+      createTodoItem(newTodo.value)
+      localStorage.setItem("todoList", todoList.innerHTML);
+    }
   });
+
+  clearBtn.addEventListener('click', () => {
+    todoList.textContent = '';
+    localStorage.removeItem('todoList', todoList.innerHTML);
+  })
+
+  function loadTodo() {
+    const data = localStorage.getItem('todoList');
+    if (data) {
+      todoList.innerHTML = data;
+    }
+    const deleteButtons = document.querySelectorAll(".delete-icons");
+    for (const button of deleteButtons) {
+      listenDeleteTodo(button);
+    }
+  }
+
+  loadTodo();
 }
 
-todoBtn.addEventListener('click', () => {
-  todoContainer.classList.remove('hide');
-  todoContainer.classList.add('show');
-})
+document.addEventListener("DOMContentLoaded", onPageLoated);
 
-todoContainer.addEventListener('click', (evt) => {
-  if (evt.target == todoContainer) {
-    todoContainer.classList.add('hide');
-    todoContainer.classList.remove('show');
-  }  
-})
-
-newTodoBtn.addEventListener('click', () => {
-  if (newTodo.value.length > 0) {
-    createTodoItem(newTodo.value)
-  }
-})
-
-newTodo.addEventListener("keypress", (keyPressed) => {
-  const keyEnter = 13;
-  if (keyPressed.which == keyEnter && newTodo.value.length > 0) {
-    createTodoItem(newTodo.value)
-  }
-});
-
-clearBtn.addEventListener('click', () => {
-  todoList.textContent = '';
-})
-
-export { createTodo };
+export { onPageLoated, createTodo};

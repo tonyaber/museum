@@ -34,6 +34,7 @@ const setSetting = (language) => {
   elementsAudio.textContent = SETTING[language]['elements-audio'];
 }
 
+
 settingBtn.addEventListener('click', () => {
   settingContent.style.opacity = "1"
   settingContentBackground.style.display = "block";
