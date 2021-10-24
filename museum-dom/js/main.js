@@ -9,4 +9,4 @@ import './tickets.js';
 import './explore.js';
 import './gallery_animation.js';
 import './map.js';
-import './top.js';
+

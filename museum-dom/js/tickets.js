@@ -210,5 +210,3 @@ btn.addEventListener('click', (evt) => {
     createMessageValidation(btn, 'Some invalid data', true);
   }
 })
-
-console.log('Score 150/150, с дополнительных возможностей - кпопка вверх');
