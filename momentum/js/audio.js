@@ -69,7 +69,12 @@ const pauseAudio = () => {
 }
 
 const changeSeekAudio = () => {
-  audio.currentTime = seekAudio.value;
+  if (isPlay) {
+    audio.currentTime = seekAudio.value;
+  } else {
+    currentTime = seekAudio.value;
+    playAudio();
+  }  
 }
 
 const playNext = () => {

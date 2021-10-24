@@ -90,4 +90,20 @@ const PLACEHOLDER = {
   },
 }
 
-export { LANGUAGES, GREETING, TIMES_OF_DAY, DATE, WEATHER, QUOTES, DEFAULT_CITY, SETTING,PLACEHOLDER }
+
+const TODO = {
+  'ru': {
+    'label': 'Список задач',
+    'save': 'Сохранить',
+    'clear': 'Очистить',
+    'placeholder': 'Добавить новую задачу'
+  },
+  'us': {
+    'label': 'TODO list',
+    'save': 'Save',
+    'clear': 'Clear',
+    'placeholder': 'Add new task'
+  }
+}
+
+export { LANGUAGES, GREETING, TIMES_OF_DAY, DATE, WEATHER, QUOTES, DEFAULT_CITY, SETTING, PLACEHOLDER, TODO}

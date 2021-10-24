@@ -2,7 +2,8 @@ import { LANGUAGES } from './const.js';
 import { setSetting } from "./set-setting.js";
 import { showTime, timer } from './show_time.js';
 import { getWeather } from './get_weather.js';
-import { getQuotes } from './get_quotes.js';;
+import { getQuotes } from './get_quotes.js';
+import { createTodo } from './todo-list.js';
 
 const settingContainer = document.querySelector('.setting-container'),
   languageRu = settingContainer.querySelector('#ru'),
@@ -28,6 +29,7 @@ const changeLanguage = () => {
       getWeather(language, city.value);
       getQuotes(language);
       setSetting(language);
+      createTodo(language);
     }
   })
 
@@ -39,6 +41,7 @@ const changeLanguage = () => {
       getWeather(language, city.value);
       getQuotes(language);
       setSetting(language);
+      createTodo(language);
     }
   })
 }
