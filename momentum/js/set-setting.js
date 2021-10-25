@@ -18,7 +18,6 @@ const languageContainer = document.querySelector('.language'),
   elementsQuotes = settingContainer.querySelector('#elements-quotes'),
   elementsAudio = settingContainer.querySelector('#elements-audio');
 
-
 const setSetting = (language) => {
   languageContainer.textContent = SETTING[language]['language'];
   backgroundContainer.textContent = SETTING[language]['background'];
@@ -33,7 +32,6 @@ const setSetting = (language) => {
   elementsQuotes.textContent = SETTING[language]['elements-quotes'];
   elementsAudio.textContent = SETTING[language]['elements-audio'];
 }
-
 
 settingBtn.addEventListener('click', () => {
   settingContent.style.opacity = "1"

@@ -431,12 +431,14 @@ body {
 .background-list input[type="text"]{
   width: 80%;
 }
+
 .elements-list label div {
   position: relative;
   display: inline-block;
   width: 40px;
   height: 20px;
 }
+
 .elements-list input {
   display:none;
 }
@@ -583,6 +585,7 @@ input:checked + .slider:before {
 .checked {
   text-decoration: line-through;
 }
+
 .delete-icons {
   position: absolute;
   right: 0;
@@ -707,8 +710,6 @@ input:checked + .slider:before {
   .footer {
     padding: 20px 50px;
   }
-
-
 }
 
 @media (max-width: 500px) {
@@ -766,6 +767,7 @@ input:checked + .slider:before {
     width: 90vw;
     font-size: 12px;
   }
+
   .elements-list label div {
     width: 20px;
     height: 10px;
@@ -780,11 +782,12 @@ input:checked + .slider:before {
   -webkit-transform: translateX(10px);
   -ms-transform: translateX(10px);
   transform: translateX(10x);
-}
+ }
 
   .background-list input[type="text"] {
     width: 60%;
   }
+
   .quote,
   .author {
     font-size: 10px;

@@ -93,24 +93,22 @@ const playPrev = () => {
 
 const volumeMute = () => {
   if (audio.muted == false) {
-    audio.muted = true;
+    audio.muted = true;    
     volumeBtn.classList.add('mute');
+
     seekVolume.value = 0;
     seekVolume.style.background = `linear-gradient(to right, #ffffff 0%, #ffffff 100%)`;
   } else {
     audio.muted = false;
     volumeBtn.classList.remove('mute');
+    
     seekVolume.value = volumeValue;
     audio.volume = volumeValue;
     seekVolume.style.background = `linear-gradient(to right, #d3d3d3 0%, #d3d3d3 ${volumeValue * 100}%, #ffffff ${volumeValue * 100}%, #ffffff 100%)`;
   }
 }
 const playOrStop = () => {
-  if (!isPlay) {
-      playAudio();
-    } else {
-      pauseAudio();
-    }
+  (!isPlay) ? playAudio(): pauseAudio();
 }
 
 

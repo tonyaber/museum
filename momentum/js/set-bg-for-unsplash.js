@@ -14,6 +14,7 @@ const changeImage = (tags = TIMES_OF_DAY[getTimeOfDay(date)]) => {
   if (tag.checked) {
     tags = document.querySelector('#tag-text').value;
   }
+
   const url = `https://api.unsplash.com/photos/random?orientation=landscape&query=${tags}&client_id=JQfdUh248AE_YVxX6O2nVv1YFgwaaWp-2j5WyqmVPFs`;
   fetch(url)
     .then(res => res.json())

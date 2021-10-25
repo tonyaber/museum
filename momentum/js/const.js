@@ -1,13 +1,11 @@
 const LANGUAGES = [
-  'us',
   'ru',
+  'us',
 ]
 
 const GREETING = {
   'us': ['Good night', 'Good morning', 'Good afternoon', 'Good evening'],
-
-  'ru': ['Доброй ночи', 'Доброе утро', 'Добрый день', 'Добрый вечер'],
-  'blr': ['Дабранач', 'Добрай раніцы', 'Добры дзень', 'Добры вечар']
+  'ru': ['Доброй ночи', 'Доброе утро', 'Добрый день', 'Добрый вечер']
 }
 
 const DATE = {
@@ -16,7 +14,6 @@ const DATE = {
 }
 
 const TIMES_OF_DAY = ['night', 'morning', 'afternoon', 'evening'];
-
 
 const WEATHER = {
   'us': {
@@ -78,7 +75,6 @@ const SETTING = {
   }
 }
 
-
 const PLACEHOLDER = {
   'ru': {
     'name':'[Укажите имя]',
@@ -89,7 +85,6 @@ const PLACEHOLDER = {
     'city': '[Enter city]'
   },
 }
-
 
 const TODO = {
   'ru': {

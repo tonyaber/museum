@@ -19,5 +19,6 @@ const playList = [
     src: './assets/sounds/Summer Wind.mp3',
     duration: '01:50'
   }
-]
+];
+
 export { playList };

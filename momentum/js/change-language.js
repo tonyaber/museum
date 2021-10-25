@@ -6,8 +6,7 @@ import { getQuotes } from './get_quotes.js';
 import { createTodo } from './todo-list.js';
 
 const settingContainer = document.querySelector('.setting-container'),
-  languageRu = settingContainer.querySelector('#ru'),
-  languageUs = settingContainer.querySelector('#us'),
+  languagesItems = settingContainer.querySelectorAll('.language_list_item input'),
   city = document.querySelector('.city');
 
 let language = localStorage.getItem('language') || LANGUAGES[1];
@@ -15,41 +14,31 @@ let language = localStorage.getItem('language') || LANGUAGES[1];
 const changeLanguage = () => {
   setSetting(language);
 
-  if (language == LANGUAGES[1]) {
-    languageRu.setAttribute('checked', '');
+  if (language == LANGUAGES[0]) {
+    languagesItems[0].setAttribute('checked', '');
   } else {
-    languageUs.setAttribute('checked', '');
+    languagesItems[1].setAttribute('checked', '');
   }
 
-  languageRu.addEventListener('click', (evt) => {
-    if (evt.target.checked) {
-      language = LANGUAGES[1]
-      clearTimeout(timer);
-      showTime(language);
-      getWeather(language, city.value);
-      getQuotes(language);
-      setSetting(language);
-      createTodo(language);
-    }
-  })
-
-  languageUs.addEventListener('click', (evt) => {
-    if (evt.target.checked) {
-      language = LANGUAGES[0]
-      clearTimeout(timer);
-      showTime(language);
-      getWeather(language, city.value);
-      getQuotes(language);
-      setSetting(language);
-      createTodo(language);
-    }
+  languagesItems.forEach((item, index) => {
+    item.addEventListener('click', (evt) => {
+      if (evt.target.checked) {
+        language = LANGUAGES[index]
+        clearTimeout(timer);
+        showTime(language);
+        getWeather(language, city.value);
+        getQuotes(language);
+        setSetting(language);
+        createTodo(language);
+      }
+    })
   })
 }
 
 const setLocalStorage = () => {
   localStorage.setItem('language', language);
 }
-window.addEventListener('beforeunload', setLocalStorage);
 
+window.addEventListener('beforeunload', setLocalStorage);
 
 export { changeLanguage, language }

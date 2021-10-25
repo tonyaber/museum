@@ -7,6 +7,7 @@ const todoBtn = document.querySelector('.todo-icons'),
   todoList = todoContent.querySelector('.todo-list'),
   clearBtn = todoContent.querySelector('.clear'),
   todoContainer = document.querySelector('.todo-container-background');
+
 const createTodo = (lang) => {
     label.textContent = TODO[lang]['label'];
     newTodoBtn.textContent = TODO[lang]['save'];
@@ -14,11 +15,11 @@ const createTodo = (lang) => {
     newTodo.setAttribute('placeholder', TODO[lang]['placeholder'])
 }
 
-const onPageLoated = (lang)=> {
-  const listenDeleteTodo = (element) =>{
-    element.addEventListener("click", (event) => {
-      element.parentElement.remove();
-      event.stopPropagation();
+const onPageLoated = ()=> {
+  const listenDeleteTodo = (btnDelete) =>{
+    btnDelete.addEventListener("click", (evt) => {
+      btnDelete.parentElement.remove();
+      evt.stopPropagation();
       localStorage.setItem("todoList", todoList.innerHTML);
     });
   }
@@ -41,12 +42,10 @@ const onPageLoated = (lang)=> {
   }
 
   const onClickTodo = (evt) => {
-    if (evt.target.checked) {
-      evt.target.parentElement.classList.add('checked');
-    } else {
-      evt.target.parentElement.classList.remove('checked');
-    }
+    evt.target.checked ? evt.target.parentElement.classList.add('checked')
+      : evt.target.parentElement.classList.remove('checked');
   }
+
   todoList.addEventListener("click", onClickTodo);
 
   todoBtn.addEventListener('click', () => {
@@ -86,9 +85,9 @@ const onPageLoated = (lang)=> {
     if (data) {
       todoList.innerHTML = data;
     }
-    const deleteButtons = document.querySelectorAll(".delete-icons");
-    for (const button of deleteButtons) {
-      listenDeleteTodo(button);
+    const btnsDelete = document.querySelectorAll(".delete-icons");
+    for (const btn of btnsDelete) {
+      listenDeleteTodo(btn);
     }
   }
 

@@ -4,7 +4,7 @@ import { setBgForUnsplash, removeListenerUnsplash } from './set-bg-for-unsplash.
 import { getLocalStorage } from './util.js';
 
 const backgroundCollection = document.querySelectorAll('.background-list label'),
-  inputTeg = document.querySelector('.background-list input[type="text"]'),
+  inputTeg = document.querySelector('#tag-text'),
   inputList = document.querySelectorAll('.background-list input[type="radio"]');
 
 const setLocalStorage = (id, input) => {
@@ -25,7 +25,7 @@ const changeBackground = (value) => {
     case 'unsplash':
       setBgForUnsplash();
       break;
-    case 'teg':
+    case 'tags':
       setBgForUnsplash(inputTeg.value)
       break;
     default:
@@ -45,8 +45,9 @@ backgroundCollection.forEach(item => {
   })
 })
 
-inputTeg.addEventListener('input', () => {  
-  document.querySelector('#teg').setAttribute('checked', '');
+inputTeg.addEventListener('change', () => {
+  inputList.forEach(item => item.removeAttribute('checked'));
+  inputList[3].setAttribute('checked', '');
   setLocalStorage('tags', inputTeg.value)
 })
 

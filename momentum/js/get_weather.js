@@ -29,4 +29,5 @@ async function getWeather(lang, city = localStorage.getItem('city') || 'Минс
       weatherDescription.textContent = WEATHER[lang]['err'];
   })  
 }
+
 export { getWeather }

@@ -45,13 +45,10 @@ const setBg = () => {
   btnNext.addEventListener('click', getSlideNext);
 }
 
-
 const removeListenerGitHub = () => {
   btnPrev.removeEventListener('click', getSlidePrev);
   btnNext.removeEventListener('click', getSlideNext);
 }
-
-
 
 export { setBg, removeListenerGitHub};
 
