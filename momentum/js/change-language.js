@@ -15,9 +15,9 @@ const changeLanguage = () => {
   setSetting(language);
 
   if (language == LANGUAGES[0]) {
-    languagesItems[0].setAttribute('checked', '');
+    languagesItems[0].checked = true;
   } else {
-    languagesItems[1].setAttribute('checked', '');
+    languagesItems[1].checked = true;
   }
 
   languagesItems.forEach((item, index) => {

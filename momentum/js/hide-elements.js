@@ -4,7 +4,7 @@ elementsList.forEach(item => {
   if (localStorage.getItem(item.value)=='off') {
     const element = document.querySelector(`.${item.value}`);
     element.classList.add('hide');
-    item.setAttribute('checked', '');
+    item.checked = true;
   }
 })
 

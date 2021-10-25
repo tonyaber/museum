@@ -45,9 +45,8 @@ backgroundCollection.forEach(item => {
   })
 })
 
-inputTeg.addEventListener('change', () => {
-  inputList.forEach(item => item.removeAttribute('checked'));
-  inputList[3].setAttribute('checked', '');
+inputTeg.addEventListener('change', () => { 
+  inputList[3].checked = true;
   setLocalStorage('tags', inputTeg.value)
 })
 
@@ -56,8 +55,7 @@ window.addEventListener('load', () => getLocalStorage('tags', inputTeg));
 window.addEventListener('load', () => {
   const background = localStorage.getItem('background') || false;
   if (background) {
-    inputList.forEach(item => item.removeAttribute('checked'));
-    document.querySelector(`#${background}`).setAttribute('checked', '');
+    document.querySelector(`#${background}`).checked = true;
     if (background == 'tags') {
       changeBackground(localStorage.getItem('tags'))
     } else {
