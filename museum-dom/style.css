@@ -742,9 +742,8 @@ background: url("assets/svg/fullscreen_exit.svg") no-repeat;
 }
 
 .video_slider_items {
-  position: relative;
-  
-  height: 258px;
+  position: relative;  
+  height: 17.63vw;
   overflow-x: hidden;
 }
 
@@ -1684,8 +1683,8 @@ form {
   color: #030303;
 }
 
-.form_tickets_date_date::-webkit-input-placeholder{
-  background: url("assets/svg/date.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 155px 4px;
+.form_tickets_date_date {
+  background: url("assets/svg/date.svg") no-repeat 10px 10px, url("assets/svg/arrow.svg") no-repeat 155px 10px;
 }
 
 .form_tickets_date_time {
@@ -1772,7 +1771,7 @@ form {
 
 @media (max-width: 1460px){
   .container {
-    max-width: 100vw;
+    max-width: calc(100vw - 40px);
     padding: 0 20px;
   }
 
@@ -2087,6 +2086,10 @@ form {
     justify-content: center;
   }
 
+  .explore_section_text {
+    width: 100%;
+  }
+
   .explore_section_text h2::after {
     bottom: -20px;
   }
@@ -2108,7 +2111,8 @@ form {
     margin-top: 0;
   }
 
-  .explore_section_img img {
+  .explore_section img, .explore_section_img, 
+  .explore_img  {
     width: 720px;
     height: 700px;
   }
@@ -2325,6 +2329,14 @@ form {
   }
 }
 @media (max-width:1020px) and (min-width: 769px) {
+  .container {
+    max-width: calc(100vw - 40px);
+  }
+
+  .header_navigation_list{
+    height: 57.12vw;
+  }
+
   .welcome_section .welcome_title h2 {
     font-size: 45px;    
     line-height: 55px;
@@ -2382,16 +2394,16 @@ form {
     width: 100%;
   }
 
-  .form_tickets_date_date::-webkit-input-placeholder{
-  background: url("assets/svg/date.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 305px 4px;
+  .form_tickets_date_date{
+  background: url("assets/svg/date.svg") no-repeat 10px 10px, url("assets/svg/arrow.svg") no-repeat 230px 10px;
   }
 
-  .form_tickets_date_time::-webkit-input-placeholder{
-    background: url("assets/svg/time.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 305px 4px;
+  .form_tickets_date_time{
+    background: url("assets/svg/time.svg") no-repeat 10px 10px, url("assets/svg/arrow.svg") no-repeat 230px 10px;
   }
 
-  .form_tickets_date select {
-    background: url("assets/svg/ballot.svg") no-repeat 12px center, url("assets/svg/arrow.svg") no-repeat 508px center;
+  .form_tickets_date .select_type {
+    background: url("assets/svg/ballot.svg") no-repeat 12px center, url("assets/svg/arrow.svg") no-repeat 505px center;
   }
 
   .form_tickets_date .input_date {
@@ -2426,6 +2438,10 @@ form {
 
 }
 @media (max-width: 768px) {
+  .container {
+   max-width: calc(100vw - 40px);
+  }
+
   section {
     margin-top: 40px;
   }
@@ -2616,12 +2632,13 @@ form {
     height: auto;
   }
 
-  .explore_section_img .explore_section_img_filter {
-    width: 61.11%;
+  .explore_section img, .explore_section_img, .explore_img {
+    width: 91vw;
+    height: 93vw;
   }
 
   .explore_section_slider {
-    height: 99%;
+    height: 100%;
   }
 
   .video_container {
@@ -2844,15 +2861,15 @@ form {
     width: 100%;
   }
 
-  .form_tickets_date_date::-webkit-input-placeholder{
-  background: url("assets/svg/date.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 305px 4px;
+  .form_tickets_date_date {
+  background: url("assets/svg/date.svg") no-repeat 10px 10px, url("assets/svg/arrow.svg") no-repeat 230px 10px;
   }
 
-  .form_tickets_date_time::-webkit-input-placeholder{
-    background: url("assets/svg/time.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 305px 4px;
+  .form_tickets_date_time {
+    background: url("assets/svg/time.svg") no-repeat 10px 10px, url("assets/svg/arrow.svg") no-repeat 230px 10px;
   }
 
-  .form_tickets_date select {
+ .form_tickets_date .select_type {
     background: url("assets/svg/ballot.svg") no-repeat 12px center, url("assets/svg/arrow.svg") no-repeat 508px center;
   }
 
@@ -2897,7 +2914,7 @@ form {
   }
 
   .explore_section_slider {
-    height: 99%;
+    height: 100%;
   }
 
   .tickets_section_sale {
@@ -3008,16 +3025,16 @@ form {
     padding-top: 11px
   }
 
-  .form_tickets_date_date::-webkit-input-placeholder{
-    background: url("assets/svg/date.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 77.38vw 4px;
+  .form_tickets_date_date{
+    background: url("assets/svg/date.svg") no-repeat 10px 10px, url("assets/svg/arrow.svg") no-repeat calc(100vw - 90px) 10px;
   }
 
-  .form_tickets_date_time::-webkit-input-placeholder{
-    background: url("assets/svg/time.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 77.38vw 4px;
+  .form_tickets_date_time{
+    background: url("assets/svg/time.svg") no-repeat 10px 10px, url("assets/svg/arrow.svg") no-repeat calc(100vw - 90px) 10px;
   }
 
-  .form_tickets_date select {
-    background: url(assets/svg/ballot.svg) no-repeat 12px center, url(assets/svg/arrow.svg) no-repeat 79.76vw center;
+  .form_tickets_date .select_type {
+    background: url(assets/svg/ballot.svg) no-repeat 12px center, url(assets/svg/arrow.svg) no-repeat calc(100vw - 90px) center;
   }
 
   .form_tickets_count {
@@ -3104,19 +3121,6 @@ form {
   .card_mastercard {
     left: 285px;
   }
-
-  .form_tickets_date_date::-webkit-input-placeholder{
-    background: url("assets/svg/date.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 73.38vw 4px;
-  }
-
-  .form_tickets_date_time::-webkit-input-placeholder{
-    background: url("assets/svg/time.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 73.38vw 4px;
-  }
-
-  .form_tickets_date select {
-    background: url(assets/svg/ballot.svg) no-repeat 12px center, url(assets/svg/arrow.svg) no-repeat 74.76vw center;
-  }
-
 }
 
 @media (max-width: 420px) {
@@ -3559,16 +3563,16 @@ form {
     padding-top: 11px
   }
 
-  .form_tickets_date_date::-webkit-input-placeholder{
-    background: url("assets/svg/date.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 77.38vw 4px;
+  .form_tickets_date_date{
+    background: url("assets/svg/date.svg") no-repeat 10px 10px, url("assets/svg/arrow.svg") no-repeat calc(100vw - 90px) 10px;
   }
 
-  .form_tickets_date_time::-webkit-input-placeholder{
-    background: url("assets/svg/time.svg") no-repeat 10px 4px, url("assets/svg/arrow.svg") no-repeat 77.38vw 4px;
+  .form_tickets_date_time{
+    background: url("assets/svg/time.svg") no-repeat 10px 10px, url("assets/svg/arrow.svg") no-repeat calc(100vw - 90px) 10px;
   }
 
   .form_tickets_date select {
-    background: url(assets/svg/ballot.svg) no-repeat 12px center, url(assets/svg/arrow.svg) no-repeat 79.76vw center;
+    background: url(assets/svg/ballot.svg) no-repeat 12px center, url(assets/svg/arrow.svg) no-repeat calc(100vw - 90px) center;
   }
 
   .form_tickets_count {
