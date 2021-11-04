@@ -16,7 +16,8 @@ const languageContainer = document.querySelector('.language'),
   elementsWeather = settingContainer.querySelector('#elements-weather'),
   elementsGreeting = settingContainer.querySelector('#elements-greeting'),
   elementsQuotes = settingContainer.querySelector('#elements-quotes'),
-  elementsAudio = settingContainer.querySelector('#elements-audio');
+  elementsAudio = settingContainer.querySelector('#elements-audio'),
+  elementsTodo = settingContainer.querySelector('#elements-todo');
 
 const setSetting = (language) => {
   languageContainer.textContent = SETTING[language]['language'];
@@ -31,6 +32,7 @@ const setSetting = (language) => {
   elementsGreeting.textContent = SETTING[language]['elements-greeting'];
   elementsQuotes.textContent = SETTING[language]['elements-quotes'];
   elementsAudio.textContent = SETTING[language]['elements-audio'];
+  elementsTodo.textContent = SETTING[language]['elements-todo'];
 }
 
 settingBtn.addEventListener('click', () => {

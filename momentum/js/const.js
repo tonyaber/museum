@@ -58,6 +58,7 @@ const SETTING = {
     'elements-greeting': 'Приветствие',
     'elements-quotes': 'Цитаты',
     'elements-audio': 'Плеер',
+    'elements-todo': 'Список дел'
   },
   'us': {
     'language': 'Language',
@@ -72,6 +73,7 @@ const SETTING = {
     'elements-greeting': 'Greeting',
     'elements-quotes': 'Quotes',
     'elements-audio': 'Audio',
+    'elements-todo': 'Todo-list'
   }
 }
 

@@ -1,10 +1,8 @@
 import { getRandomNum } from "./util.js";
 import { QUOTES } from "./const.js";
-import { language } from "./change-language.js";
 
 const quote = document.querySelector('.quote'),
-  author = document.querySelector('.author'),
-  btnQuote = document.querySelector('.change-quote');
+  author = document.querySelector('.author');
 
 async function getQuotes(lang) {
   const res = await fetch(QUOTES[lang]);
@@ -13,7 +11,5 @@ async function getQuotes(lang) {
   quote.textContent = data[index].text;
   author.textContent = data[index].author;
 }
-
-btnQuote.addEventListener('click', () => getQuotes(language));
 
 export { getQuotes };
