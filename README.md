@@ -13,4 +13,4 @@
  - form validation
  - adding an interactive map to the site, connected using the mapbox js-library, its customization: adding markers, changing the style
 
- # [Deploy](https://tonyaber.github.io/museum/museum-dom/)
+ ## [Deploy](https://tonyaber.github.io/museum/museum-dom/)
