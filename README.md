@@ -1,6 +1,6 @@
-The museum is an educational project from Rs School.
+# The museum is an educational project from Rs School.
 
-** Basic skills: ** 
+## Basic skills:  
  - valid semantic markup
  - easy to maintain readable code
  - export styles and graphics from Figma
@@ -13,4 +13,4 @@ The museum is an educational project from Rs School.
  - form validation
  - adding an interactive map to the site, connected using the mapbox js-library, its customization: adding markers, changing the style
 
- [Deploy](https://tonyaber.github.io/museum/museum-dom/)
+ # [Deploy](https://tonyaber.github.io/museum/museum-dom/)
