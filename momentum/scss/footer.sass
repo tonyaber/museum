@@ -1,0 +1,218 @@
+@use 'const'
+.footer 
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+    width: 100%
+    height: 29vh
+    min-height: 160px
+    padding: 20px 150px
+    .setting 
+        position: absolute
+        bottom: 10px
+        left: 20px
+    .setting-container 
+        position: relative
+        display: inline-block
+        .setting-icons 
+            background-image: url("../assets/svg/setting.svg")
+            filter: invert(100%)
+            opacity: 0.6
+        .footer-icons
+            @include const.icon
+        .setting-container-background 
+            display: none
+            position: absolute
+            bottom:0
+            left: 0
+            width: 90vw
+            height: 90vh
+            opacity: 1
+            .setting-content 
+                padding-top: 30px
+                opacity: 0
+                position: absolute
+                left: 0
+                bottom: 50px
+                background-color: rgba(0, 0, 0, 0.9)
+                border-radius: 10px
+                width: 500px
+                height: 400px
+                z-index: 1
+                list-style: none
+                transition: all 1s
+                font-size: 22px
+                .setting-select-item 
+                    background-color:#303030
+                li 
+                    color: const.$general_color
+                    padding: 12px 20px
+                    opacity: 1
+                    text-align: left
+                    width: 50%
+                    cursor: pointer
+                    input 
+                        margin-right: 10px
+                .language_list,
+                .background-list,
+                .elements-list 
+                    padding-top: 30px
+                    box-sizing: border-box
+                    width: 50%
+                    position: absolute
+                    left: 50%
+                    top:0
+                .language_list_item
+                    display: block
+                    text-align: left
+                    margin-left: -1px
+                    padding: 12px 20px
+                    &:hover
+                        background-color:#303030
+                .background-list,
+                .elements-list
+                    label
+                        display: block
+                        text-align: left
+                        margin-left: -1px
+                        padding: 12px 20px
+                        &:hover
+                            background-color:#303030
+                input
+                    margin-right: 10px
+                .background-list 
+                    input
+                        &[type="text"]
+                            width: 60%
+                            cursor: pointer
+                .setting-hide 
+                    display: none
+                .elements-list 
+                    label 
+                        div 
+                            position: relative
+                            display: inline-block
+                            width: 40px
+                            height: 20px
+                    input 
+                        display: none 
+                        &:checked + .slider
+                            background-color: #2196F3
+                            &::before
+                                -webkit-transform: translateX(20px)
+                                -ms-transform: translateX(20px)
+                                transform: translateX(20px)
+                        &:focus + .slider
+                            box-shadow: 0 0 1px #2196F3
+                                    
+                    .slider 
+                        position: absolute
+                        cursor: pointer
+                        top: 0
+                        left: 0
+                        right: 0
+                        bottom: 0
+                        background-color: #ccc
+                        -webkit-transition: .4s
+                        transition: .4s
+                        &:before
+                            position: absolute
+                            content: ""
+                            height: 20px
+                            width: 20px
+                            left: 0
+                            bottom: 0
+                            background-color: const.$general_color
+                            -webkit-transition: .4s
+                            transition: .4s
+                    .slider.round 
+                        border-radius: 34px
+                        &::before
+                            border-radius: 50%
+    .change-quote
+        margin-bottom: 30px
+        background-image: url("../assets/svg/reload.svg")
+        @include const.icon
+    .quote 
+        min-height: 32px
+    .author 
+        min-height: 20px
+    .todo 
+        position: absolute
+        right: 30px
+        bottom: 100px
+        .todo-container 
+            position: relative
+            .todo-icons
+                background-image: url("../assets/svg/list-svgrepo-com.svg")
+                filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(17deg) brightness(102%) contrast(105%)
+            .todo-icons,
+            .footer-icons
+                @include const.icon
+            .todo-container-background 
+                position: absolute
+                bottom: 0
+                right: 0
+                height: 80vh
+                width: 90vw
+                .todo-content 
+                    position: absolute
+                    background-color: const.$general_color
+                    padding: 20px
+                    width: 300px
+                    bottom: 50px
+                    right: 0
+                    border-radius: 10px
+                    color:#000000
+                    text-align: left
+                    h3
+                        margin: 10px 0
+                    #new-todo 
+                        padding:5px
+                        width: 160px
+                        height: 30px
+                    .save 
+                        padding: 5px 10px
+                        background-color: rgb(49, 143, 89)
+                        color: const.$general_color
+                        border-radius: 5px
+                        border: none
+                        &:hover
+                            background-color: rgb(43, 105, 70)
+                    .clear 
+                        padding: 5px 10px
+                        background-color: rgb(231, 0, 0)
+                        color: const.$general_color
+                        border-radius: 5px
+                        border: none
+                        margin: 10px
+                        &:hover
+                             background-color: rgb(145, 5, 5)
+                    li 
+                        position: relative
+                        width: 260px
+                        list-style: none
+                        font-size: 20px
+                        padding: 5px
+                        padding-right: 25px
+                        margin: 5px 0      
+                    .checked 
+                        text-decoration: line-through
+                    .delete-icons 
+                        position: absolute
+                        right: 0
+                        background-image: url("../assets/svg/delete-svgrepo-com.svg")
+                        width: 20px
+                        height: 20px
+                        background-size: 20px
+    
+
+
+
+
+
+
+
+

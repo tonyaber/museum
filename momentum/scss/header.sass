@@ -1,0 +1,151 @@
+@use 'const'
+.header 
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    width: 100%
+    height: 30vh
+    min-height: 220px
+    padding: 20px
+    .player-controls-and-seek 
+        display: flex
+        align-items: center
+        gap: 30px
+        .player-controls 
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 120px
+            margin-bottom: 28px
+            .player-icon        
+                @include const.icon
+            .player-icon.small 
+                width: 15px
+                height: 15px
+                background-size: 15px
+                margin-right: 10px
+            .play 
+                width: 40px
+                height: 40px
+                background-size: 40px 40px
+                background-image: url("../assets/svg/play.svg")
+            .pause 
+                background-image: url("../assets/svg/pause.svg")
+            .play-prev 
+                background-image: url("../assets/svg/play-prev.svg")
+            .play-next 
+                background-image: url("../assets/svg/play-next.svg")
+        .player-title 
+            transition: all 1s
+            .player-seek 
+                display: flex
+                align-items: center
+                gap: 5px
+                opacity: 1
+                transition: all 1s
+                .volume-icons 
+                    background-image: url("../assets/svg/volume.svg")
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+                .volume-icons.mute 
+                    background-image: url("../assets/svg/mute.svg")
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+                .volume-icons
+                    @include const.icon
+                #seek-audio,
+                #seek-volume 
+                    -webkit-appearance: none
+                    height: 8px
+                    border-radius: 4px
+                #seek-audio 
+                    width: 200px
+                #seek-volume 
+                    width: 60px
+                    background: linear-gradient(to right, #d3d3d3 0%, #d3d3d3 50%, #ffffff 50%, #ffffff 100%)
+                #seek-audio,
+                #seek-volume
+                    &::-webkit-slider-thumb
+                        -webkit-appearance: none
+                        height: 20px
+                        width: 20px
+                        background-color: #d3d3d3
+                        border-radius: 50%
+
+    .play-list 
+        text-align: left
+        .play-item 
+            position: relative
+            padding: 5px
+            padding-left: 20px
+            list-style: none
+            opacity: .8
+            cursor: pointer
+            transition: 0.3s
+            &:hover
+                opacity: 1
+            &::before
+                content: "\2713"
+                position: absolute
+                left: 0
+                top: 2px
+                font-weight: 900
+        .item-active
+            &::before 
+                color: #C5B358
+        .player-icon
+            @include const.icon
+        .player-icon.small 
+            width: 15px
+            height: 15px
+            background-size: 15px
+            margin-right: 10px 
+        .play 
+            width: 40px
+            height: 40px
+            background-size: 40px 40px
+            background-image: url("../assets/svg/play.svg")
+        .pause 
+            background-image: url("../assets/svg/pause.svg")
+    .weather
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        row-gap: 5px
+        width: 180px
+        min-height: 180px
+        text-align: left
+        .weather-error 
+            margin-top: -10px
+        .weather-icon 
+            font-size: 44px
+        .description-container 
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-start
+            align-items: center
+            column-gap: 12px
+        .city 
+            width: 170px
+            height: 34px
+            padding: 5px
+            font-size: 20px
+            line-height: 24px
+            color: const.$general_color
+            border: 0
+            outline: 0
+            border-bottom: 1px solid const.$general_color
+            background-color: transparent
+            &::placeholder
+                font-size: 20px
+                color: const.$general_color
+                opacity: .6
+
+
+
+
+
+
+
+
+
+
